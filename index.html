@@ -35,7 +35,7 @@
               </div>
               <div class="md-list-item-content">
                 <h3 class="text-md">
-                  <a href="https://styleguide.sandbox.aristamd.com/src/index.html">Angulr Original Template</a>
+                  <a href="javascript:;" onclick="onClick('baseTemplate')">Angulr Original Template</a>
                 </h3>
                 <small class="font-thin">Base template for PO usage</small>
               </div>
@@ -46,7 +46,7 @@
               </div>
               <div class="md-list-item-content">
                 <h3 class="text-md">
-                  <a href="https://styleguide.sandbox.aristamd.com/src/material.html">Angulr Material Template</a>
+                  <a href="javascript:;" onclick="onClick('materialTemplate')">Angulr Material Template</a>
                 </h3>
                 <small class="font-thin">Material template for PO usage</small>
               </div>
@@ -57,7 +57,7 @@
               </div>
               <div class="md-list-item-content">
                 <h3 class="text-md">
-                  <a href="https://styleguide.sandbox.aristamd.com/aristamd/src/index.html">AristaMD Guide</a>
+                  <a href="javascript:;" onclick="onClick('aristaTemplate')">AristaMD Guide</a>
                 </h3>
                 <small class="font-thin">This is a reference guide for devs</small>
               </div>
@@ -66,5 +66,32 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      function onClick(link) {
+        var environment = 'sandbox';
+        var route = 'aristamd/src/index.html';
+        var splitHost = window.location.host.split('.');
+
+        if (splitHost.length > 0) {
+            environment = splitHost[1];
+        }
+
+        switch (link) {
+          case 'baseTemplate':
+            route = 'src/index.html';
+            break;
+          case 'materialTemplate':
+            route = 'src/material.html';
+            break;
+          case 'aristaTemplate':
+            route = 'aristamd/src/index.html';
+            break
+        }
+
+        var url = ['https://styleguide.', environment,'.aristamd.com/', route];
+        window.open(url.join(""), '_self');
+
+      }
+    </script>
   </body>
 </html>
