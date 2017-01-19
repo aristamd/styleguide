@@ -85,5 +85,13 @@
     "videogular-overlay-play": "~0.7.0",
     "videogular-poster": "~0.7.0",
     "waves": "~0.7.2"
+  },
+  "resolutions": {
+    "angular": "1.5.8",
+    "angular-sanitize": "1.5.8",
+    "angular-cookies": "1.5.8",
+    "moment": "~2.10.3",
+    "angular-touch": "1.5.8",
+    "fullcalendar": "~2.7.1"
   }
 }
