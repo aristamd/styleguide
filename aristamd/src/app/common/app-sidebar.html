@@ -1,0 +1,26 @@
+<aside class="sidebar">
+  <div class="sidebar__logo">
+    <a href="">
+      <img src="./img/arista-logo.png" alt="">
+    </a>
+  </div>
+  <span class="sidebar__header">
+    Style Guide v1.0.0
+  </span>
+  <ul class="sidebar__lst">
+    <li
+      class="sidebar__item"
+      ng-repeat="item in ::$ctrl.contactTags">
+        <a
+          class="sidebar__link"
+          ui-sref="{{item.state}}"
+          ui-sref-active-eq="sidebar__link--active"
+          ng-click="$ctrl.onStateChanged(item.state);">
+          <i class="material-icons">
+            {{ ::item.icon }}
+          </i>
+          {{ ::item.label }}
+        </a>
+    </li>
+  </ul>
+</aside>
