@@ -9,9 +9,9 @@ class AppYesNoQuestionController {
   }
 }
 
-let components = {
+let appYesNoQuestion = {
   template: require('./appYesNoQuestion.html'),
   controller: AppYesNoQuestionController,
 };
 
-export default components;
+export default appYesNoQuestion;

@@ -4,9 +4,9 @@ class FormsController {
   }
 }
 
-let components = {
+let forms = {
   template: require('./forms.html'),
   controller: FormsController,
 };
 
-export default components;
+export default forms;

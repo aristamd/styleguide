@@ -9,9 +9,9 @@ class AppYesFreeTextNoQuestionController {
   }
 }
 
-let components = {
+let appYesFreeTextNoQuestion = {
   template: require('./appYesFreeTextNoQuestion.html'),
   controller: AppYesFreeTextNoQuestionController,
 };
 
-export default components;
+export default appYesFreeTextNoQuestion;

@@ -1,0 +1,21 @@
+<div class="radio inline">
+    <label class="i-checks">
+        <input type="radio"
+               value="1"
+               ng-model="$ctrl.body.response">
+        <i></i>
+        Yes
+    </label>
+</div>
+<div class="inline" ng-show="$ctrl.body.response == '1'">
+    <input ng-model="$ctrl.body.freeText" type="text" class="form-control inline" placeholder="Free Text goes here">
+</div>
+<div class="radio">
+    <label class="i-checks">
+        <input type="radio"
+               value="0"
+               ng-model="$ctrl.body.response">
+        <i></i>
+        No
+    </label>
+</div>
