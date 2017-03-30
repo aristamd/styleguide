@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-3">
+        <div class="input-group w-md">
+            <input
+            type="text"
+            class="form-control"
+            uib-datepicker-popup="MM/dd/yyyy"
+            ng-model="$ctrl.body.response"
+            is-open="$ctrl.isPickerOpened"
+            datepicker-options="$ctrl.dateOptions" />
+            <span class="input-group-btn">
+                <button
+                type="button"
+                class="btn btn-default"
+                ng-click="$ctrl.openPicker()">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
+
+

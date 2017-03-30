@@ -1,0 +1,11 @@
+
+<div ng-repeat="choice in $ctrl.choices" class="checkbox">
+    <label class="i-checks">
+        <input type="checkbox"
+        ng-checked="$ctrl.body.choices.indexOf(choice) !== -1"
+        value="{{choice}}"
+        ng-click="$ctrl.toggleSelection(choice)">
+        <i></i>
+        {{choice}}
+    </label>
+</div>

@@ -2,8 +2,15 @@ class MultipleChoiceQuestionController {
   constructor() {
     var ctrl = this;
 
+    ctrl.choices = [
+      'Choice 1',
+      'Choice 2',
+      'Choice 3',
+      'Choice 4'
+    ];
+
     ctrl.body = {
-      response : '1',
+      response : ctrl.choices[0],
     };
 
   }
