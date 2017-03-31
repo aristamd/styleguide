@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-xs-2">
+        <div class="row">
+            <div class="col-xs-6">
+                <input
+                 class="form-control"
+                 type="text"
+                 ng-model="$ctrl.body.pressure.systolic"
+                >
+                <label class="m-l-sm">Systolic</label>
+            </div>
+            <div class="col-xs-6">
+                <input
+                class="form-control"
+                type="text"
+                ng-model="$ctrl.body.pressure.diastolic"
+                >
+                <label class="m-l-xs">Diastolic</label>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3">
+        <div class="input-group w-md">
+            <input
+            class="form-control"
+            type="text"
+            ng-model="$ctrl.body.response"
+            uib-datepicker-popup="MM/dd/yyyy"
+            is-open="$ctrl.isPickerOpened"
+            datepicker-options="$ctrl.dateOptions" />
+            <span class="input-group-btn">
+                <button
+                class="btn btn-default"
+                type="button"
+                ng-click="$ctrl.openPicker()">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
+
+

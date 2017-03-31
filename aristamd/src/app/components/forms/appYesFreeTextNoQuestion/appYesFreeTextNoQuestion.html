@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-xs-1">
+        <div class="radio no-padder">
+            <label class="i-checks">
+                <input
+                type="radio"
+                value="1"
+                ng-model="$ctrl.body.response">
+                <i></i>
+                Yes
+            </label>
+        </div>
+    </div>
+    <div class="col-xs-4" ng-show="$ctrl.body.response == '1'">
+        <textarea
+        class="form-control"
+        rows="1"
+        placeholder="Free text prompter text goes here"
+        ng-model="$ctrl.body.text"
+        ></textarea>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="radio">
+            <label class="i-checks">
+                <input
+                type="radio"
+                value="0"
+                ng-model="$ctrl.body.response">
+                <i></i>
+                No
+            </label>
+        </div>
+    </div>
+</div>
+
