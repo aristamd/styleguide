@@ -10,12 +10,14 @@ import multipleChoiceFreeTextQuestion from './multipleChoiceFreeTextQuestion';
 import appYesNoFreeTextQuestion from './appYesNoFreeTextQuestion';
 import multipleSelectQuestion from './multipleSelectQuestion';
 import dateQuestion from './dateQuestion';
+import bloodPressureDateQuestion from './bloodPressureDateQuestion';
+import wholeNumberDateQuestion from './wholeNumberDateQuestion';
 const MODULE_NAME = 'forms';
 
   export default angular.module( MODULE_NAME,
     [uiRouter, appYesNoQuestion, appYesFreeTextNoQuestion, multipleChoiceQuestion,
       multipleChoiceFreeTextQuestion, appYesNoFreeTextQuestion, multipleSelectQuestion,
-      dateQuestion, angularUi
+      dateQuestion, angularUi, bloodPressureDateQuestion, wholeNumberDateQuestion
     ]
   )
     .component(MODULE_NAME, forms)
