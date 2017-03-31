@@ -2,16 +2,16 @@
     <div class="col-xs-3">
         <div class="input-group w-md">
             <input
-            type="text"
             class="form-control"
-            uib-datepicker-popup="MM/dd/yyyy"
+            type="text"
             ng-model="$ctrl.body.response"
+            uib-datepicker-popup="MM/dd/yyyy"
             is-open="$ctrl.isPickerOpened"
             datepicker-options="$ctrl.dateOptions" />
             <span class="input-group-btn">
                 <button
-                type="button"
                 class="btn btn-default"
+                type="button"
                 ng-click="$ctrl.openPicker()">
                     <i class="glyphicon glyphicon-calendar"></i>
                 </button>

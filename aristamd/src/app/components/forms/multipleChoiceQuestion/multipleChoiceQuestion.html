@@ -1,8 +1,9 @@
-<div ng-repeat="choice in $ctrl.choices" class="radio">
+<div class="radio" ng-repeat="choice in $ctrl.choices" >
     <label class="i-checks">
-        <input type="radio"
-               value="{{choice}}"
-               ng-model="$ctrl.body.response">
+        <input
+        type="radio"
+        value="{{choice}}"
+        ng-model="$ctrl.body.response">
         <i></i>
         {{choice}}
     </label>

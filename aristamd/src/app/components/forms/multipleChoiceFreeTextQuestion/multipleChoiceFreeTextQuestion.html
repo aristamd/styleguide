@@ -1,8 +1,9 @@
-<div ng-repeat="choice in $ctrl.choices" class="radio">
+<div class="radio" ng-repeat="choice in $ctrl.choices">
     <label class="i-checks">
-        <input type="radio"
-               value="{{choice}}"
-               ng-model="$ctrl.body.response">
+        <input
+        type="radio"
+        value="{{choice}}"
+        ng-model="$ctrl.body.response">
         <i></i>
         {{choice}}
     </label>
@@ -10,9 +11,9 @@
 <div class="row">
     <div class="col-xs-3">
         <textarea
-                class="form-control"
-                placeholder="Free text prompter text goes here"
-                ng-model="$ctrl.body.text"
+        class="form-control"
+        placeholder="Free text prompter text goes here"
+        ng-model="$ctrl.body.text"
         ></textarea>
     </div>
 </div>

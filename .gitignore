@@ -2,3 +2,4 @@ node_modules
 bower_components
 aristamd/node_modules
 aristamd/bower_components
+.idea

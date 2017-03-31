@@ -1,9 +1,9 @@
-
-<div ng-repeat="choice in $ctrl.choices" class="checkbox">
+<div class="checkbox" ng-repeat="choice in $ctrl.choices">
     <label class="i-checks">
-        <input type="checkbox"
-        ng-checked="$ctrl.body.choices.indexOf(choice) !== -1"
+        <input
+        type="checkbox"
         value="{{choice}}"
+        ng-checked="$ctrl.body.choices.indexOf(choice) !== -1"
         ng-click="$ctrl.toggleSelection(choice)">
         <i></i>
         {{choice}}
