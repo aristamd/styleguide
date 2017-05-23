@@ -8,6 +8,9 @@
                 <h5 class="font-bold">COMPONENTS</h5>
               </div>
               <div class="list-group bg-white">
+                <a ui-sref="components.stepper" class="list-group-item">
+                  <i class="fa fa-fw fa-envelope"></i> Stepper
+                </a>
                 <a href class="list-group-item">
                   <i class="fa fa-fw fa-envelope"></i> Forms
                 </a>
@@ -32,17 +35,7 @@
         </div>
   </aside>
   <section class="app-section-content">
-    <header class="section-header bg-light lter b-b wrapper-md">
-      <h2 class="m-n font-thin">Forms</h2>
-    </header>
-    <div class="wrapper-md bg-white">
-      <div class="row">
-        <div class="col-sm-12 connected">
-          <h3>Buttons</h3>
-          <button class="btn btn-success">primary</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <ui-view>
+    </ui-view>
+  </section>
 </div>
