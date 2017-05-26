@@ -1,0 +1,22 @@
+<div  
+    class="row app-accordion__container" 
+    ng-mousedown='$ctrl.mouseDown()' 
+    ng-mouseup='$ctrl.mouseUp()'
+    ng-click="$ctrl.onClickAccordion($event)" 
+    ng-class="{'expandcollapse-heading-collapsed': !$ctrl.isExpanded, 'expandcollapse-heading-expanded': $ctrl.isExpanded,
+    'transform-active':$ctrl.isExpanded ,'noHover': !$ctrl.nudge}">
+	<div class="col-xs-12"> 
+	    <span class="pull-left"> {{$ctrl.titleLeft}}</span>
+	    <span class="pull-right"> {{$ctrl.titleRight}}</span>
+	</div>
+    <div  class="col-xs-12 toggleContainer" ng-show="$ctrl.isExpanded">
+        <div class="row">
+            <div class="col-xs-6">
+
+            </div>
+            <div class="col-xs-6">
+         
+            </div>
+        </div>
+    </div>
+</div>

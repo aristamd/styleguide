@@ -12,7 +12,7 @@
 // @import "angulr/app.buttons.less";
 // @import "angulr/app.widgets.less";
 //
-// @import "angulr/app.components.less";
+ @import "angulr/app.components.less";
 // @import "angulr/app.plugin.less";
 // @import "angulr/app.item.less";
 // @import "angulr/app.ng.less";
@@ -21,3 +21,68 @@
 @import "angulr/app.utilities.less";
 //
 // @import "angulr/app.butterbar.less";
+
+.modal-header ,.modal-footer {
+    background: #3695eb;
+}
+.white-text {
+      color: #FFF;
+}
+.modal-header.white-text {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    padding: 20px;
+}
+.modal-dialog.modal-lg {
+    width: 100%;
+    margin: 0px;
+}
+.accordion-modal-body {
+    padding-top: 80px;
+    min-height: 670px;
+}
+.modal-body {
+    padding-top: 80px;
+}
+
+.expandcollapse-heading-collapsed span{
+  font-size: 16px;
+  margin:0px;
+}
+.expandcollapse-heading-expanded span{
+  font-size: 38px; /* 42px */
+}
+.font .expandcollapse-heading-expanded span{
+    font-size: 28px;
+}
+.font .expandcollapse-heading-collapsed span{
+    font-size: 16px;
+}
+ .app-accordion__container{
+  height:25px;
+  max-height:300px;
+  transition: height 1s linear;
+ }
+ .expandcollapse-heading-expanded{
+  height:100px;
+  max-height:300px;
+  cursor: pointer;
+  z-index: 100000000;
+  padding: 0px 25px 15px;
+ }
+
+.expandcollapse-heading-collapsed{
+   cursor: pointer;
+   padding: 0 25px;
+}
+.expandcollapse-heading-collapsed:not(.noHover):hover{
+   padding-bottom: 10px;
+}
+
+.app-accordion__container {
+  min-height: 0px;
+  height:auto;
+ 
+}
+

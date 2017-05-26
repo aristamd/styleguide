@@ -8,7 +8,7 @@
                 <h5 class="font-bold">COMPONENTS</h5>
               </div>
               <div class="list-group bg-white">
-                <a href class="list-group-item">
+                <a class="list-group-item">
                   <i class="fa fa-fw fa-envelope"></i> Forms
                 </a>
                 <a href class="list-group-item">
@@ -26,23 +26,16 @@
                 <a href class="list-group-item">
                   <i class="fa fa-fw fa-bell"></i> Notifications
                 </a>
+                  <a ui-sref="components.headers" class="list-group-item">
+                  <i class="fa fa-fw fa-bell"></i> Header
+                </a>
               </div>
             </div>
           </div>
         </div>
   </aside>
   <section class="app-section-content">
-    <header class="section-header bg-light lter b-b wrapper-md">
-      <h2 class="m-n font-thin">Forms</h2>
-    </header>
-    <div class="wrapper-md bg-white">
-      <div class="row">
-        <div class="col-sm-12 connected">
-          <h3>Buttons</h3>
-          <button class="btn btn-success">primary</button>
-        </div>
-      </div>
-    </div>
+    <div ui-view></div>
   </div>
 </section>
 </div>
