@@ -1,0 +1,34 @@
+
+
+<header class="section-header bg-light lter b-b wrapper-md">
+    <h2 class="m-n font-thin">Header Accordion</h2>
+</header>
+<div class="row font">
+    <div class ="col-xs-12">
+         <div class="modal-header white-text">
+          <app-header-accordion 
+          title-left="$ctrl.headerData.left"
+          is-expanded="$ctrl.headerData.expandend"
+          content-left="$ctrl.headerData.cleft"
+          title-right="$ctrl.headerData.right"
+          content-right="$ctrl.headerData.cright"
+          nudge="$ctrl.headerData.nudge"
+          transition-time="$ctrl.headerData.transitionTime"
+          app-header-directive>
+          </app-header-accordion>
+       </div>
+        <div class="modal-body">
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+          Why do we use it?
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+       </div>
+        <div class="modal-footer separator">
+          <button class="pull-left">Close</button>
+        </div>
+    </div>
+
+      <div class ="col-xs-6 app-section-content">
+        <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg')">Large modal</button>  
+    </div>
+</div>
