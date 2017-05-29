@@ -9,7 +9,6 @@ let headerModal = {
     ctrl.$onInit = function(){
       ctrl.headerData = ctrl.resolve.data
     }
-    // body...
   }
 };
 

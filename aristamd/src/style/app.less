@@ -21,10 +21,34 @@
 @import "angulr/app.utilities.less";
 //
 // @import "angulr/app.butterbar.less";
+md-tabs-content-wrapper._md {
+    background-color: gainsboro;
+}
 
-.modal-header ,.modal-footer {
+// Tabs CSS
+code{
+  background-color:transparent;
+  color: currentColor;
+  padding:0px;
+}
+span.class-color {
+    color: teal;
+}
+span.label-color {
+    color: purple;
+}
+.modal-header ,.modal-footer,.md-accent-tab>md-tabs-wrapper {
     background: #3695eb;
 }
+
+ul.header-options {
+    padding-top: 20px;
+}
+
+.highlight > span {
+    display: block;
+}
+// Modal Css
 .white-text {
       color: #FFF;
 }
@@ -45,25 +69,14 @@
 .modal-body {
     padding-top: 80px;
 }
-
+// Header Expandable Css
 .expandcollapse-heading-collapsed span{
   font-size: 16px;
   margin:0px;
 }
 .expandcollapse-heading-expanded span{
-  font-size: 38px; /* 42px */
+  font-size: 38px; 
 }
-.font .expandcollapse-heading-expanded span{
-    font-size: 28px;
-}
-.font .expandcollapse-heading-collapsed span{
-    font-size: 16px;
-}
- .app-accordion__container{
-  height:25px;
-  max-height:300px;
-  transition: height 1s linear;
- }
  .expandcollapse-heading-expanded{
   height:100px;
   max-height:300px;
@@ -71,7 +84,6 @@
   z-index: 100000000;
   padding: 0px 25px 15px;
  }
-
 .expandcollapse-heading-collapsed{
    cursor: pointer;
    padding: 0 25px;
@@ -79,10 +91,8 @@
 .expandcollapse-heading-collapsed:not(.noHover):hover{
    padding-bottom: 10px;
 }
-
 .app-accordion__container {
   min-height: 0px;
   height:auto;
- 
+  max-height:300px; 
 }
-

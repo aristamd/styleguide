@@ -1,34 +1,114 @@
-
-
 <header class="section-header bg-light lter b-b wrapper-md">
     <h2 class="m-n font-thin">Header Accordion</h2>
 </header>
-<div class="row font">
-    <div class ="col-xs-12">
-         <div class="modal-header white-text">
-          <app-header-accordion 
-          title-left="$ctrl.headerData.left"
-          is-expanded="$ctrl.headerData.expandend"
-          content-left="$ctrl.headerData.cleft"
-          title-right="$ctrl.headerData.right"
-          content-right="$ctrl.headerData.cright"
-          nudge="$ctrl.headerData.nudge"
-          transition-time="$ctrl.headerData.transitionTime"
-          app-header-directive>
-          </app-header-accordion>
-       </div>
-        <div class="modal-body">
-           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-          Why do we use it?
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-       </div>
-        <div class="modal-footer separator">
-          <button class="pull-left">Close</button>
-        </div>
-    </div>
-
-      <div class ="col-xs-6 app-section-content">
-        <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg')">Large modal</button>  
+    <div ng-cloak>
+      <md-content class="md-padding">
+        <md-tabs class="md-accent-tab" md-selected="$ctrl.data.selectedIndex">
+            <md-tab id="tab1">
+            <md-tab-label>Example</md-tab-label>
+            <md-tab-body>
+              <div  class="wrapper">
+                 <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg')">Open full modal</button>  
+              </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab2">
+            <md-tab-label>Html</md-tab-label>
+            <md-tab-body>
+            <div class="wrapper">
+             <code class="highlight" > 
+                <span><span class="label-color">&lt;div</span> <span class="class-color">class</span><span class="label-color">=</span>"modal-header white-text"<span class="label-color">&gt;</span></span>
+                <span><span class="label-color">&lt;app-header-accordion</span></span> 
+                <span><span class="class-color">title-left</span><span class="label-color">=</span>"$ctrl.headerData.left"</span>
+                <span><span class="class-color">is-expanded</span><span class="label-color">=</span>"$ctrl.headerData.expandend"</span>
+                <span><span class="class-color">content-left</span><span class="label-color">=</span>"$ctrl.headerData.cleft"</span>
+                <span><span class="class-color">title-right</span><span class="label-color">=</span>"$ctrl.headerData.right"</span>
+                <span><span class="class-color">content-right</span><span class="label-color">=</span>"$ctrl.headerData.cright"</span>
+                <span><span class="class-color">nudge</span><span class="label-color">=</span>"$ctrl.headerData.nudge"</span>
+                <span><span class="class-color">transition-time</span><span class="label-color">=</span>"$ctrl.headerData.transitionTime"</span>
+                <span><span class="label-color">app-header-directive</span><span class="label-color">&gt;</span></span>
+                <span><span class="label-color">&lt;/</span><span class="label-color">app-header-accordion</span><span class="label-color">&gt;</span></span>
+                <span><span class="label-color">&lt;/div</span><span class="label-color">&gt;</span></span>
+                <span><span class="label-color">&lt;div</span> <span class="class-color">class</span><span class="label-color">=</span>"accordion-modal-body"<span class="label-color">&gt;</span></span>
+                <span>   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+                <span><span class="label-color">/div&gt;</span></span>
+                <span><span class="label-color">&lt;div </span><span class="class-color">class</span><span class="label-color">=</span>"modal-footer separator"</span>&gt;</span></span>
+                <span><span class="label-color">&lt;button </span><span class="class-color">class</span>="pull-left"&gt;Close<span class="label-color">&lt;/button&gt;</span></span>
+                <span><span class="label-color">&lt;/div&gt;</span></span>
+            </code>
+            </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab3">
+            <md-tab-label>JS</md-tab-label>
+            <md-tab-body>
+              <div class="wrapper">
+              <code class="highlight">
+                <span>ctrl.headerData <span class="label-color">= {</span></span> 
+                <span><span class="class-color">left</span>: 'Patient Name',</span> 
+                <span><span class="class-color">expandend</span>:false,</span> 
+                <span><span class="class-color">cleft</span>:</span> 
+                <span><span class="class-color">right</span>:'Econsult Request 12345',</span> 
+                <span><span class="class-color">cright</span>:'',</span> 
+                <span><span class="class-color">nudge</span>:true,</span> 
+                <span><span class="class-color">contentRight</span>:'&lt;',</span> 
+                <span><span class="class-color">nudge</span>:'&lt;',</span> 
+                <span><span class="class-color">transitionTime</span>:300</span> 
+                <span><span class="label-color">},</span></span> 
+             </code>
+             </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab4">
+            <md-tab-label>CSS</md-tab-label>
+            <md-tab-body>
+            <div class="wrapper">
+               <code class="highlight"><span><span class="class-color">.expandcollapse-heading-collapsed span</span>{</span>
+                  <span>font-size: 16px;</span>
+                  <span>margin:0px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.expandcollapse-heading-expanded span</span>{</span>
+                  <span>font-size: 38px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.expandcollapse-heading-expanded</span>{<</span>
+                  <span>height:100px;</span>
+                  <span>max-height:300px;</span>
+                  <span>cursor: pointer;</span>
+                  <span>z-index: 100000000;</span>
+                  <span>padding: 0px 25px 15px;</span>
+                  <span> }</span>
+                  <span><span class="class-color">.expandcollapse-heading-collapsed</span>{</span>
+                  <span>cursor: pointer;</span>
+                  <span> padding: 0 25px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.expandcollapse-heading-collapsed:not(.noHover):hover</span>{</span>
+                  <span>padding-bottom: 10px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.app-accordion__container</span> {</span>
+                  <span> min-height: 0px;</span>
+                  <span>height:auto; </span>
+                  <span>}</span>
+                </code>
+                </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab5">
+            <md-tab-label>Options</md-tab-label>
+            <md-tab-body>
+            <ul class="header-options">
+             <li> isExpanded: boolean</li>
+             <li> titleLeft: string</li>
+             <li> contentLeft: string (template is acceptable)</li>
+             <li> titleRight: string</li>
+             <li> contentRight: string (template is acceptable)</li>
+             <li> nudge: boolean</li>
+             <li> transitionTime: number (300 ms default)</li>
+             <li> app-header-directive : directive (required)</li>
+             </ul>
+            </md-tab-body>
+          </md-tab>
+          
+        </md-tabs>
+      </md-content>
     </div>
 </div>
