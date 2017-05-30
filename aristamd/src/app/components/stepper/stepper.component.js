@@ -1,5 +1,5 @@
 class StepperController {
-  constructor($mdStepper, $timeout, $sce) {
+  constructor($mdStepper, $timeout, $sce, communicationCenterService) {
     const ctrl = this;
     const baseStepOptions = {
       title: 'Step Title',
@@ -20,6 +20,12 @@ class StepperController {
         }
       ]
     };
+
+    ctrl.buttonClick = () => {
+      debugger;
+      ctrl.stepperChannel.post('click', 'hola');
+    }
+
     ctrl.nextStep = function () {
       ctrl.stepperService.skip();
     }
@@ -32,6 +38,7 @@ class StepperController {
       $timeout(function () {
         ctrl.stepperService = $mdStepper('stepper-demo');
         ctrl.stepperApi = ctrl.stepperService;
+        ctrl.stepperChannel = communicationCenterService.createChannel('stepper');
       });
 
       ctrl.steps.map(function (step) {

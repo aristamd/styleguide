@@ -1,13 +1,15 @@
 class StepperDemoController {
-  constructor() {
+  constructor(communicationCenterService, $scope) {
     const ctrl = this;
 
     ctrl.$onInit = function () {
       ctrl.title = 'Example 1';
       ctrl.stepperApi = {};
-      ctrl.hola = function () {
-        alert('hola mundo');
-      }
+      ctrl.stepperChannel = communicationCenterService.createChannel('stepper');
+      ctrl.stepperChannel.on('click')
+      .subscribe((text)=>{
+        alert(ctrl.title);
+      });
       ctrl.steps = [{
         title: 'Step Title',
         content: '<div ng-if="true">Hello Step</div>',

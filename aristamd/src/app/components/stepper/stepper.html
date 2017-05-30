@@ -12,7 +12,7 @@
                 <md-button
                 ng-repeat="action in step.actions"
                 class="md-primary md-raised"
-                ng-click="action.onActionClick">{{action.buttonText}}</md-button>
+                ng-click="$ctrl.buttonClick()">{{action.buttonText}}</md-button>
             </md-step-actions>
         </md-step>
     </md-stepper>
