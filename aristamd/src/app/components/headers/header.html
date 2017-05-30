@@ -47,12 +47,10 @@
                 <span>ctrl.headerData <span class="label-color">= {</span></span> 
                 <span><span class="class-color">left</span>: 'Patient Name',</span> 
                 <span><span class="class-color">expandend</span>:false,</span> 
-                <span><span class="class-color">cleft</span>:</span> 
+                <span><span class="class-color">contentLeft</span>:</span> 
                 <span><span class="class-color">right</span>:'Econsult Request 12345',</span> 
-                <span><span class="class-color">cright</span>:'',</span> 
+                <span><span class="class-color">contentRight</span>:'',</span> 
                 <span><span class="class-color">nudge</span>:true,</span> 
-                <span><span class="class-color">contentRight</span>:'&lt;',</span> 
-                <span><span class="class-color">nudge</span>:'&lt;',</span> 
                 <span><span class="class-color">transitionTime</span>:300</span> 
                 <span><span class="label-color">},</span></span> 
              </code>
@@ -70,7 +68,7 @@
                   <span><span class="class-color">.expandcollapse-heading-expanded span</span>{</span>
                   <span>font-size: 38px;</span>
                   <span>}</span>
-                  <span><span class="class-color">.expandcollapse-heading-expanded</span>{<</span>
+                  <span><span class="class-color">.expandcollapse-heading-expanded</span>{</span>
                   <span>height:100px;</span>
                   <span>max-height:300px;</span>
                   <span>cursor: pointer;</span>
@@ -95,16 +93,16 @@
           <md-tab id="tab5">
             <md-tab-label>Options</md-tab-label>
             <md-tab-body>
-            <ul class="header-options">
-             <li> isExpanded: boolean</li>
-             <li> titleLeft: string</li>
-             <li> contentLeft: string (template is acceptable)</li>
-             <li> titleRight: string</li>
-             <li> contentRight: string (template is acceptable)</li>
-             <li> nudge: boolean</li>
-             <li> transitionTime: number (300 ms default)</li>
-             <li> app-header-directive : directive (required)</li>
-             </ul>
+              <div class="wrapper-options wrapper">
+             <span> isExpanded: boolean <md-tooltip md-direction="right">If the header is expanded as default. Default: false</md-tooltip></span>
+             <span> titleLeft: string <md-tooltip md-direction="right">Title on the left</md-tooltip></span>
+             <span> contentLeft: string (template is acceptable) <md-tooltip md-direction="right">Content that is on the left</md-tooltip></span>
+             <span> titleRight: string <md-tooltip md-direction="right">Title on the right</md-tooltip></span>
+             <span> contentRight: string (template is acceptable) <md-tooltip md-direction="right">Content that is on the left</md-tooltip></span>
+             <span> nudge: boolean <md-tooltip md-direction="right">Property that enable the on mouseover and on mouseout animations</md-tooltip></span>
+             <span> transitionTime: number (300 ms default) <md-tooltip md-direction="right">Transition time for the animations</md-tooltip></span>
+             <span> app-header-directive : directive (required) <md-tooltip md-direction="right">Directive Required to apply the animations</md-tooltip></span>
+             </div>
             </md-tab-body>
           </md-tab>
           

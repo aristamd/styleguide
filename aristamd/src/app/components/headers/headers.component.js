@@ -10,7 +10,7 @@ class HeaderController {
         right:'Econsult Request 12345',
         cright:'',
         nudge:true,
-        transitionTime:300
+        transitionTime:600
       };
       ctrl.data = {
         selectedIndex: 0,

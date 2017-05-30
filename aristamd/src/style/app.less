@@ -21,11 +21,26 @@
 @import "angulr/app.utilities.less";
 //
 // @import "angulr/app.butterbar.less";
-md-tabs-content-wrapper._md {
-    background-color: gainsboro;
-}
+
 
 // Tabs CSS
+.wrapper-options{
+  width:50%;
+}
+md-tooltip.ng-isolate-scope.md-origin-right.md-panel.md-tooltip.md-show {
+    font-size: 12px;
+    background-color: black;
+    opacity: 0.8;
+}
+.wrapper-options span {
+    display: block;
+}
+md-tabs-content-wrapper._md {
+    background-color: rgb(250,250,250);
+}
+md-tabs.md-accent-tab{
+    height: 500px;
+}
 code{
   background-color:transparent;
   color: currentColor;
@@ -70,29 +85,34 @@ ul.header-options {
     padding-top: 80px;
 }
 // Header Expandable Css
-.expandcollapse-heading-collapsed span{
-  font-size: 16px;
-  margin:0px;
+.expandcollapse-heading-collapsed {
+//  height:20px; 
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
+
 }
-.expandcollapse-heading-expanded span{
-  font-size: 38px; 
+.expandcollapse-heading-expanded{
+//  height:100px;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
- .expandcollapse-heading-expanded{
-  height:100px;
-  max-height:300px;
-  cursor: pointer;
-  z-index: 100000000;
-  padding: 0px 25px 15px;
- }
-.expandcollapse-heading-collapsed{
-   cursor: pointer;
-   padding: 0 25px;
+.expandcollapse-heading-expanded:not(.noHover):hover{
+//  height:90px;
 }
 .expandcollapse-heading-collapsed:not(.noHover):hover{
-   padding-bottom: 10px;
+   padding-bottom: 20px;
 }
-.app-accordion__container {
-  min-height: 0px;
-  height:auto;
-  max-height:300px; 
+.expandcollapse-heading-collapsed span{
+font-size: 16px;
+margin:0px;
 }
+.expandcollapse-heading-expanded span{
+font-size: 38px;
+}
+
