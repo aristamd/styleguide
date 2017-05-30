@@ -86,33 +86,32 @@ ul.header-options {
 }
 // Header Expandable Css
 .expandcollapse-heading-collapsed {
-//  height:20px; 
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  -webkit-transition: 1s;
-  transition: 1s;
-
+  height:20px!important; 
 }
 .expandcollapse-heading-expanded{
-//  height:100px;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-.expandcollapse-heading-expanded:not(.noHover):hover{
-//  height:90px;
 }
 .expandcollapse-heading-collapsed:not(.noHover):hover{
-   padding-bottom: 20px;
+   padding-bottom: 30px;
 }
 .expandcollapse-heading-collapsed span{
 font-size: 16px;
 margin:0px;
 }
 .expandcollapse-heading-expanded span{
-font-size: 38px;
+font-size: 32px;
+}
+.col-xs-12.animate-show-hide{
+   position: absolute;
+    transition:0.2s opacity linear;
+    -webkit-transition-delay: 0.2s; /* Safari */
+    transition-delay: 0.3s;
+   opacity:1;
+   top:73px;
+}
+.col-xs-12.animate-show-hide.ng-hide{
+  position: absolute;
+  opacity:0;
+   -webkit-transition-delay: 0.1s; /* Safari */
+    transition-delay: 0.1s;
 }
 
