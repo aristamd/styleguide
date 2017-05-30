@@ -3,7 +3,7 @@ function routing ($stateProvider) {
     .state({
       name: 'components.stepper',
       url: '/components/stepper',
-      template: '<app-stepper></app-stepper>',
+      template: '<stepper-demo></stepper-demo>'
     });
 }
 

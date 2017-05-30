@@ -1,1 +1,21 @@
-<div>hola step</div>
+<div class="wrapper-md bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>{{$ctrl.title}}</h3>
+      <md-stepper
+      id="stepper-demo"
+      md-linear="false">
+        <md-step ng-repeat="step in $ctrl.steps" md-label="{{step.title}}" md-optional="{{step.optional}}">
+            <md-step-body app-dynamic="step.content">
+            </md-step-body>
+            <md-step-actions>
+                <md-button
+                ng-repeat="action in step.actions"
+                class="md-primary md-raised"
+                ng-click="action.onActionClick">{{action.buttonText}}</md-button>
+            </md-step-actions>
+        </md-step>
+    </md-stepper>
+    </div>
+  </div>
+</div>
