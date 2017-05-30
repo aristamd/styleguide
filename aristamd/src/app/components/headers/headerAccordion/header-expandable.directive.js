@@ -7,7 +7,6 @@ function HeaderExpandableDirective (){
             element[0].firstChild.style.transition = '' + ctrl.transitionTime + 'ms all ease-in-out';
             // Add the delay or the time of the transition depending of the options
             ctrl.onClickAccordion = onClickAccordion;
-            ctrl.isFirstTime = true;
             element[0].firstChild.style.height = '20px';
 
             function onClickAccordion(event){
@@ -35,7 +34,7 @@ function HeaderExpandableDirective (){
             }
             ctrl.addExpandedAnimations = function(){
               var hiddenContainer = angular.element(element[0].getElementsByClassName('animate-show-hide'))[0].clientHeight + 20;
-              ctrl.expandedContainer = ctrl.isFirstTime ? (element[0].firstChild.clientHeight + hiddenContainer) : ctrl.expandedContainer; 
+              ctrl.expandedContainer = (element[0].firstChild.clientHeight + hiddenContainer); 
               ctrl.isFirstTime = false;
                /*Get the height of the container to use it on the nudge animation*/
                  element[0].firstChild.style.height = ''+ ctrl.expandedContainer+'px';
