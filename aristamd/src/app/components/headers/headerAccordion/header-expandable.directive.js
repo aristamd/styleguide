@@ -14,16 +14,16 @@ function HeaderExpandableDirective (){
                 ctrl.isExpanded = !ctrl.isExpanded;
                
               }
-              if ( !ctrl.isExpanded  & ctrl.nudge & ctrl.time === 1) {
+              if ( !ctrl.isExpanded  & ctrl.nudge & ctrl.time <= 1) {
                /* if the state is collapsed we need to define the start height to auto to display the animation */
                var elemt = angular.element(element[0].getElementsByClassName('expandcollapse-heading-expanded'));  
                 elemt.on('mouseover', function() {
-                elemt.css({'height': '20px','padding-bottom':'30px'});
+                elemt.css({'height': '20px','padding-bottom':'50px'});
                       });
                 elemt.on('mouseout', function() {
                 elemt.css({'height':'20px','padding-bottom':'0px'});
                       });
-              } else if (ctrl.isExpanded &&  ctrl.nudge && ctrl.time === 1) {
+              } else if (ctrl.isExpanded &&  ctrl.nudge && ctrl.time <= 1) {
                /*We ned to call this function after hidden div be displayed because we need the height of the
                 content to add the mouseover animation on this state;
                 */

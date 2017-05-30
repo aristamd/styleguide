@@ -72,7 +72,7 @@ ul.header-options {
 }
 .modal-header.white-text {
     position: absolute;
-    width: 100%;
+    width: 101%;
     z-index: 999;
     padding: 20px;
 }
@@ -89,12 +89,12 @@ ul.header-options {
 }
 // Header Expandable Css
 .expandcollapse-heading-collapsed {
-  height:20px!important; 
+  height:64px!important; 
 }
 .expandcollapse-heading-expanded{
 }
 .expandcollapse-heading-collapsed:not(.noHover):hover{
-   padding-bottom: 30px;
+   padding-bottom: 50px;
 }
 .expandcollapse-heading-collapsed span{
 font-size: 16px;
@@ -102,19 +102,18 @@ margin:0px;
 }
 .expandcollapse-heading-expanded span{
 font-size: 32px;
+transition: 0.1s all linear;
+transition-delay: 0.3s;
 }
 .col-xs-12.animate-show-hide{
-   position: absolute;
-    transition:0.2s opacity linear;
-    -webkit-transition-delay: 0.2s; /* Safari */
-    transition-delay: 0.3s;
-   opacity:1;
-   top:73px;
+  transition:0.2s opacity linear;
+  -webkit-transition-delay: 0.2s; /* Safari */
+  transition-delay: 0.3s;
+  opacity:1;
 }
 .col-xs-12.animate-show-hide.ng-hide{
-  position: absolute;
   opacity:0;
-   -webkit-transition-delay: 0.1s; /* Safari */
-    transition-delay: 0.1s;
+  -webkit-transition-delay: 0.01s; /* Safari */
+  transition-delay: 0.01s;
 }
 
