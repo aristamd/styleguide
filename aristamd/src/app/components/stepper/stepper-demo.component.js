@@ -1,5 +1,5 @@
 class StepperDemoController {
-  constructor(communicationCenterService, $scope) {
+  constructor(communicationCenterService, $scope, $uibModal) {
     const ctrl = this;
 
     ctrl.$onInit = function () {
@@ -70,7 +70,28 @@ class StepperDemoController {
         ]
       }];
     }
+
+    ctrl.open = function (size, parentSelector) {
+      var modalInstance = $uibModal.open({
+        animation: true,
+        component: 'appStepper',
+        size: size,
+        resolve:{
+          steps: function () {
+            return ctrl.steps;
+          },
+          stepperApi: function () {
+             return ctrl.stepperApi;
+          },
+          title: function () {
+             return ctrl.title;
+          },
+        }
+      });
+    }
+
   }
+
 }
 
 let stepperDemo = {

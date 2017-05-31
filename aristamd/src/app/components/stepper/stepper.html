@@ -1,7 +1,9 @@
 <div class="wrapper-md bg-white">
   <div class="row">
     <div class="col-sm-12">
-      <h2>{{$ctrl.title}}</h2>
+     <div class="app__stepper-title">
+        <h2>{{$ctrl.title}}</h2>
+      </div>
       <md-stepper
       id="stepper-demo"
       md-linear="false">
@@ -9,11 +11,11 @@
             <md-step-body class="wrapper" app-dynamic="step.content">
             </md-step-body>
             <md-step-actions class="modal-footer">
-                <md-button
+                <button
                 ng-repeat="action in step.actions"
-                class="md-raised"
+                class="app__stepper-button"
                 ng-class="{'app__stepper-button--primary-color': action.isPrimary}"
-                ng-click="$ctrl.buttonClick()">{{action.buttonText}}</md-button>
+                ng-click="$ctrl.buttonClick()">{{action.buttonText}}</button>
             </md-step-actions>
         </md-step>
     </md-stepper>

@@ -1,5 +1,6 @@
 md-step-body.wrapper.ng-scope{
 	height:300px;
+    padding: 20px 25px 0px;
 }
 .app__stepper-body{
 	margin-bottom:20px;
@@ -16,17 +17,19 @@ md-step-body.wrapper.ng-scope{
 .modal-footer{
 	background-color:#3695eb;	
 }
-.md-button.app__stepper-button--primary-color{
+.app__stepper-button.app__stepper-button--primary-color{
 	color: #fff;
     background-color: #23ad44;
     border-color: #20a03f;
     float:right;
 
 }
-.md-button.app__stepper-button--primary-color.md-raised:not([disabled]):hover , .md-button:not(disabled).md-raised.md-focused.app__stepper-button--primary-color  {
+button.app__stepper-button--primary-color:hover, button.app__stepper-button--primary-color:focus, button.app__stepper-button--primary-color:active {
+    color: #fff;
     background-color: #23ad44;
+    border-color: #20a03f;
 }
-button.md-button {
+.app__stepper-button {
 	background-color: #fff;
 	border-color: #dee5e7;
 	border-bottom-color: #d8e1e3;
@@ -35,9 +38,25 @@ button.md-button {
     border-radius: 2px;
     outline: 0!important;
    color: #58666e;
-    font-size: 11px;
-    height: 24px;
+    font-size: 13px;
+    height: 32px;
     margin: 0px 5px;
     float: left;
     padding: 0px 20px;
+    border: none;
+}
+.app__stepper-button:hover, .app__stepper-button:focus, .app__stepper-button:active{
+    color: #58666e;
+    background-color: #edf1f2;
+    border-color: #c7d3d6;
+}
+.app__stepper-title {
+    border-top: 1px solid #E8E8E8;
+    padding:15px 26px;
+}
+.app__stepper-title h2{
+   margin:0px;
+}
+#stepper-demo .md-steppers-horizontal .md-stepper-indicator {
+    min-height: 54px;
 }
