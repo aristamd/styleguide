@@ -1,0 +1,25 @@
+<div class="wrapper-md bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+     <div class="app__stepper-title">
+        <h2>{{$ctrl.title}}</h2>
+      </div>
+      <md-stepper
+      id="{{$ctrl.id}}"
+      md-linear="false">
+        <md-step ng-repeat="step in $ctrl.steps" md-label="{{step.title}}" md-optional="{{step.optional}}">
+            <md-step-body class="wrapper" app-dynamic="step.content">
+            </md-step-body>
+            <md-step-actions class="modal-footer">
+                <button
+                ng-repeat="action in step.actions"
+                class="app__stepper-button"
+                ng-class="{'app__stepper-button--primary-color': action.isPrimary,
+                'pull-left': action.alignment == 'left','pull-right':action.alignment == 'right'}"
+                ng-click="action.onClick($event)">{{action.buttonText}}</button>
+            </md-step-actions>
+        </md-step>
+    </md-stepper>
+    </div>
+  </div>
+</div>

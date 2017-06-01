@@ -1,0 +1,17 @@
+<header class="section-header bg-light lter b-b wrapper-md">
+  <h2 class="m-n font-thin">Stepper</h2>
+</header>
+<label><h3>Demo</h3></label>
+<button type="button" class="btn btn-default stepper-modal-button" ng-click="$ctrl.open('lg')">Open full modal</button>
+<!-- <uib-accordion>
+    <div
+    uib-accordion-group
+    class="panel-default"
+    heading="Options">
+      <label for="txtTitle">
+        Title
+      </label>
+      <input type="text" ng-model="$ctrl.title">
+    </div>
+</uib-accordion> -->
+<app-stepper title="{{$ctrl.title}}" stepper-api="$ctrl.stepperApi" steps="$ctrl.steps" id="app-stepper-demo-1"></app-stepper>

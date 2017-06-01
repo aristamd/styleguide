@@ -8,7 +8,10 @@
                 <h5 class="font-bold">COMPONENTS</h5>
               </div>
               <div class="list-group bg-white">
-                <a class="list-group-item">
+                <a ui-sref="components.stepper" class="list-group-item">
+                  <i class="fa fa-fw fa-envelope"></i> Stepper
+                </a>
+                <a href class="list-group-item">
                   <i class="fa fa-fw fa-envelope"></i> Forms
                 </a>
                 <a href class="list-group-item">
@@ -35,7 +38,7 @@
         </div>
   </aside>
   <section class="app-section-content">
-    <div ui-view></div>
-  </div>
-</section>
+    <ui-view>
+    </ui-view>
+  </section>
 </div>

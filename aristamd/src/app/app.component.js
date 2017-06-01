@@ -6,8 +6,8 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
 import routing from './app.config';
-import identity from './identity/';
-import components from './components/';
+import identity from './identity-section/';
+import components from './components-section/';
 
 class AppController {
   constructor() {
