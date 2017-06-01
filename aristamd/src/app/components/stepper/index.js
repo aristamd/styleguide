@@ -13,6 +13,7 @@ import channelService from './channel.service'
 import communicationCenterService from './communication-center.service'
 import stepper from './stepper.component';
 import stepperDemo from './stepper-demo.component';
+import stepperModal from './stepper-modal.component';
 import routing from './stepper.config';
 import dynamicDirective from './dynamic-compile.directive';
 
@@ -24,5 +25,6 @@ const MODULE_NAME = 'components.stepper';
     .directive('appDynamic', dynamicDirective)
     .component('appStepper', stepper)
     .component('stepperDemo', stepperDemo)
+    .component('stepperModal', stepperModal)
     .config(routing)
     .name;
