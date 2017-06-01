@@ -8,7 +8,8 @@ class StepperController {
       onClick: () => {
         ctrl.stepperService.next();
       },
-      isPrimary: true
+      isPrimary: true,
+      alignment: 'right',
     };
 
     const defaultPreviousAction = {
@@ -17,6 +18,15 @@ class StepperController {
       onClick: () => {
         ctrl.stepperService.back();
       },
+      isPrimary: false,
+      alignment: 'left',
+    };
+
+    const defaultCustomAction = {
+      buttonText:'Click me',
+      type: 'custom',
+      isPrimary: false,
+      alignment: 'right',
     };
 
     const baseStepOptions = {
@@ -37,12 +47,14 @@ class StepperController {
     };
 
     ctrl.$onInit = function () {
+      if (angular.isUndefined(ctrl.id)) {
+        throw('AristaMD Stepper Error: stepper needs an id');
+      }
       $timeout(function () {
-        ctrl.stepperService = $mdStepper('stepper-demo');
+        ctrl.stepperService = $mdStepper(ctrl.id);
         ctrl.stepperApi = ctrl.stepperService;
-        ctrl.stepperChannel = communicationCenterService.createChannel('stepper');
       });
-
+      ctrl.stepperChannel = communicationCenterService.createChannel(ctrl.id);
       ctrl.steps = ctrl.steps.map((step) => {
         step.optional = step.optional ? 'Optional' : '';
         if (step.actions) {
@@ -52,12 +64,11 @@ class StepperController {
               angular.merge(tempAction, defaultNextAction, action);
             } else if (action.type === 'back') {
               angular.merge(tempAction, defaultPreviousAction, action);
-            }
-            else if (action.type === 'custom') {
-              action.onClick = (event) => {
+            } else if (action.type === 'custom') {
+              angular.merge(tempAction, defaultCustomAction, action);
+              tempAction.onClick = (event) => {
                 ctrl.stepperChannel.post(action.onActionClick, event);
               };
-              tempAction = action;
             }
           return tempAction;
           });
@@ -75,7 +86,7 @@ let stepper = {
     title: '@',
     stepperApi: '=',
     steps: '<',
-    resolve:'<',
+    id:'@',
   }
 }
 

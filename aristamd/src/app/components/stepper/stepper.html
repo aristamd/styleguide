@@ -5,7 +5,7 @@
         <h2>{{$ctrl.title}}</h2>
       </div>
       <md-stepper
-      id="stepper-demo"
+      id="{{$ctrl.id}}"
       md-linear="false">
         <md-step ng-repeat="step in $ctrl.steps" md-label="{{step.title}}" md-optional="{{step.optional}}">
             <md-step-body class="wrapper" app-dynamic="step.content">
@@ -16,7 +16,7 @@
                 class="app__stepper-button"
                 ng-class="{'app__stepper-button--primary-color': action.isPrimary,
                 'pull-left': action.alignment == 'left','pull-right':action.alignment == 'right'}"
-                ng-click="action.onClick()">{{action.buttonText}}</button>
+                ng-click="action.onClick($event)">{{action.buttonText}}</button>
             </md-step-actions>
         </md-step>
     </md-stepper>
