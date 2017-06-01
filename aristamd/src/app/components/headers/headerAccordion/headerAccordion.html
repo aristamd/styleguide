@@ -1,10 +1,9 @@
-<div  
-    class="row modal-header white-text" 
-    ng-mousedown='$ctrl.mouseDown()' 
+<div class="modal-header white-text" 
+    ng-mousedown='$ctrl.mouseDown()'
     ng-mouseup='$ctrl.mouseUp()'
-    ng-click="$ctrl.onClickAccordion($event)" 
+    ng-click="$ctrl.onClickAccordion($event)"
     ng-class="{'expandcollapse-heading-collapsed': !$ctrl.isExpanded, 'expandcollapse-heading-expanded': $ctrl.isExpanded,'noHover': !$ctrl.nudge}">
-	<div class="col-xs-12"> 
+	<div class="col-xs-12">
 	    <span class="pull-left"> {{$ctrl.titleLeft}}</span>
 	    <span class="pull-right"> {{$ctrl.titleRight}}</span>
 	</div>
@@ -16,7 +15,7 @@
                 <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                 <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             </div>
-            <div class="col-xs-6">        
+            <div class="col-xs-6">
             </div>
         </div>
     </div>
