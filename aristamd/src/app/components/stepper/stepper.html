@@ -14,7 +14,8 @@
                 <button
                 ng-repeat="action in step.actions"
                 class="app__stepper-button"
-                ng-class="{'app__stepper-button--primary-color': action.isPrimary}"
+                ng-class="{'app__stepper-button--primary-color': action.isPrimary,
+                'pull-left': action.alignment == 'left','pull-right':action.alignment == 'right'}"
                 ng-click="$ctrl.buttonClick()">{{action.buttonText}}</button>
             </md-step-actions>
         </md-step>

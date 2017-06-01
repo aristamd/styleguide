@@ -49,13 +49,16 @@ class StepperDemoController {
             buttonText:'Next',
             type: 'next',
             onActionClick: ctrl.hola,
-            isPrimary: true
+            isPrimary: true,
+            alignment:'right'
+
           },
           {
             buttonText:'Back to Step',
             type: 'previous',
             onActionClick: ctrl.previousStep,
-            isPrimary: false
+            isPrimary: false,
+            alignment:'right'
           },
         ]
       },
