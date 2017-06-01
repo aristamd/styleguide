@@ -9,13 +9,11 @@ import 'material-steppers/dist/material-steppers.js';
 import 'material-steppers/dist/material-steppers-tpl.js';
 import 'material-steppers/dist/material-steppers.css';
 
-import channelService from './channel.service'
-import communicationCenterService from './communication-center.service'
+import channelService from '../../common/channel.service';
+import communicationCenterService from '../../common/communication-center.service'
 import stepper from './stepper.component';
-import stepperDemo from './stepper-demo.component';
-import stepperModal from './stepper-modal.component';
-import routing from './stepper.config';
-import dynamicDirective from './dynamic-compile.directive';
+
+import dynamicDirective from '../../common/dynamic-compile.directive';
 
 const MODULE_NAME = 'components.stepper';
 
@@ -24,7 +22,4 @@ const MODULE_NAME = 'components.stepper';
     .service('communicationCenterService', communicationCenterService)
     .directive('appDynamic', dynamicDirective)
     .component('appStepper', stepper)
-    .component('stepperDemo', stepperDemo)
-    .component('stepperModal', stepperModal)
-    .config(routing)
     .name;

@@ -5,7 +5,7 @@ class ComponentsController {
 }
 
 let components = {
-  template: require('./components.html'),
+  template: require('./components-section.html'),
   controller: ComponentsController,
 }
 
