@@ -1,8 +1,8 @@
 import angular from 'angular';
 import stepper from './stepper'
-import headers from './headers/';
+import headerExpandable from './header-expandable/';
 
 const MODULE_NAME = 'components';
 
-  export default angular.module('components', [headers, stepper])
+  export default angular.module('components', [headerExpandable, stepper])
     .name;

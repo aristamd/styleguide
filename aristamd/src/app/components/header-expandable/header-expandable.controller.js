@@ -1,4 +1,4 @@
-export default class HeaderAccordionController {
+export default class HeaderExpandableController {
   constructor() {
     var ctrl = this;
 

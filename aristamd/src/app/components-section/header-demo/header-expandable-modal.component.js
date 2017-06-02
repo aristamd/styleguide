@@ -1,13 +1,17 @@
 
 let headerModal = {
-  template: require('./headerModal.html'),
+  template: require('./header-expandable-modal.html'),
   bindings: {
-    resolve : '<'
+    resolve : '<',
+    dismiss: '&',
   },
   controller: function () {
     var ctrl = this;
     ctrl.$onInit = function(){
       ctrl.headerData = ctrl.resolve.data
+    }
+     ctrl.close = function(){
+        ctrl.dismiss({$value: 'cancel'});
     }
   }
 };

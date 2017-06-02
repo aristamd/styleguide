@@ -1,4 +1,4 @@
-class HeaderController {
+class HeaderDemoController {
   constructor($uibModal, $log, $document) {
     let ctrl = this;
    
@@ -20,19 +20,22 @@ class HeaderController {
     ctrl.open = function (size, parentSelector) {    
       var modalInstance = $uibModal.open({
         animation: true,
-        component: 'appHeaderModal',
+        component: 'headerModal',
         size: size,
         resolve: {
           'data':ctrl.headerData,
         }
       });
-    }
+        modalInstance.result.then(function (selectedItem) {
+           alert('a');
+    });
   }
 }
+}
 
-let headers = {
-  template: require('./header.html'),
-  controller: HeaderController,
+let headerDemo = {
+  template: require('./header-expandable-demo.html'),
+  controller: HeaderDemoController,
 };
 
-export default headers;
+export default headerDemo;

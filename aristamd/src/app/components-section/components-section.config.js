@@ -7,6 +7,11 @@ function routing ($stateProvider) {
       abstract: true,
     })
     .state({
+      name: 'components.headers',
+      url: '/components/header-expandable',
+      template: '<header-demo></header-demo>'
+    })
+    .state({
       name: 'components.stepper',
       url: '/components/stepper',
       template: '<stepper-demo></stepper-demo>'

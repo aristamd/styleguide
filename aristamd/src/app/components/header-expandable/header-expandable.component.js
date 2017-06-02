@@ -1,6 +1,8 @@
-let headerAccordion = {
-  template: require('./headerAccordion.html'),
-  controller: 'HeaderAccordionController',
+
+
+let headerExpandable = {
+  template: require('./header-expandable.html'),
+  controller: 'HeaderExpandableController',
   bindings: {
   	isExpanded:'<',
   	titleLeft:'<',
@@ -12,4 +14,4 @@ let headerAccordion = {
   },
 };
 
-export default headerAccordion;
+export default headerExpandable;
