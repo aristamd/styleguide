@@ -4,6 +4,7 @@ function routing ($stateProvider) {
       name: 'components',
       url: '/components',
       template: '<components-section></components-section>',
+      abstract: true,
     })
     .state({
       name: 'components.stepper',

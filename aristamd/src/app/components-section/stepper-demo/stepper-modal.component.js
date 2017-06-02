@@ -4,16 +4,24 @@ let stepperModal = {
   template: require('./stepper-modal.html'),
   bindings: {
   },
-  controller: function (communicationCenterService) {
+  controller: function ($timeout, communicationCenterService) {
     var ctrl = this;
     ctrl.$onInit = function(){
       ctrl.title = 'Example 2';
       ctrl.stepperApi = {};
       ctrl.stepperChannel = communicationCenterService.createChannel('app-stepper-demo-2');
-      ctrl.stepperChannel.on('customClick')
+
+      ctrl.stepperChannel.on('onErrorClick')
       .subscribe((event)=>{
         ctrl.stepperApi.error('This is an error message.')
       });
+
+      ctrl.stepperChannel.on('onNotificationClick')
+      .subscribe((event)=>{
+        ctrl.stepperApi.showFeedback('This is a way to show feedback');
+        $timeout(() => { ctrl.stepperApi.clearFeedback() }, 3000);
+      });
+
       ctrl.steps = [{
         title: 'Step Title',
         content: '<div class="app__stepper-body" ng-if="true">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'+
@@ -67,6 +75,21 @@ let stepperModal = {
       {
         title: 'Step Title 2',
         content: '<div>Hello Step 2</div>',
+        optional: true,
+        actions: [
+          {
+            buttonText:'Next Action',
+            type: 'next',
+            onActionClick: ctrl.nextStep,
+          },
+          {
+            type: 'back',
+          },
+        ]
+      },
+      {
+        title: 'Step Title 3',
+        content: '<div>Hello Step 3</div>',
         optional: false,
         actions: [
           {
@@ -78,11 +101,16 @@ let stepperModal = {
             type: 'back',
           },
           {
-            buttonText:'Third',
+            buttonText:'Error Message',
             type: 'custom',
-            onActionClick: 'customClick',
-            isPrimary: false,
+            onActionClick: 'onErrorClick',
             alignment: 'right',
+          },
+          {
+            buttonText:'Notification',
+            type: 'custom',
+            onActionClick: 'onNotificationClick',
+            alignment: 'left',
           }
         ]
       }];

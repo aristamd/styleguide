@@ -1,17 +1,98 @@
 <header class="section-header bg-light lter b-b wrapper-md">
   <h2 class="m-n font-thin">Stepper</h2>
 </header>
-<label><h3>Demo</h3></label>
-<button type="button" class="btn btn-default stepper-modal-button" ng-click="$ctrl.open('lg')">Open full modal</button>
-<!-- <uib-accordion>
-    <div
-    uib-accordion-group
-    class="panel-default"
-    heading="Options">
-      <label for="txtTitle">
-        Title
-      </label>
-      <input type="text" ng-model="$ctrl.title">
+    <div ng-cloak>
+      <md-content class="md-padding">
+        <md-tabs class="md-accent-tab" md-selected="$ctrl.data.selectedIndex">
+            <md-tab id="tab1">
+            <md-tab-label>
+              Example
+            </md-tab-label>
+            <md-tab-body>
+              <div  class="wrapper">
+                <button type="button" class="btn btn-default stepper-modal-button" ng-click="$ctrl.open('lg')">Open full modal</button>
+                <!-- <app-stepper title="{{$ctrl.title}}" stepper-api="$ctrl.stepperApi" steps="$ctrl.steps" id="app-stepper-demo-1"></app-stepper> -->
+              </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab2">
+            <md-tab-label>Html</md-tab-label>
+            <md-tab-body>
+            <div class="wrapper">
+             <code class="highlight" >
+                <span><span class="label-color">&lt;app-stepper</span></span>
+                <span><span class="class-color">title</span><span class="label-color">=</span>"brackets $ctrl.title brackets"</span>
+                <span><span class="class-color">stepper-api</span><span class="label-color">=</span>"$ctrl.stepperApi"</span>
+                <span><span class="class-color">steps</span><span class="label-color">=</span>"$ctrl.steps"</span>
+                <span><span class="class-color">id</span><span class="label-color">=</span>"app-stepper-demo-1"</span>
+                <span><span class="label-color">&lt;/</span><span class="label-color">app-stepper</span><span class="label-color">&gt;</span></span>
+            </code>
+            </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab3">
+            <md-tab-label>JS</md-tab-label>
+            <md-tab-body>
+              <div class="wrapper">
+              <code class="highlight">
+                <span>ctrl.headerData <span class="label-color">= {</span></span>
+                <span><span class="class-color">left</span>: 'Patient Name',</span>
+                <span><span class="class-color">expandend</span>:false,</span>
+                <span><span class="class-color">contentLeft</span>:</span>
+                <span><span class="class-color">right</span>:'Econsult Request 12345',</span>
+                <span><span class="class-color">contentRight</span>:'',</span>
+                <span><span class="class-color">nudge</span>:true,</span>
+                <span><span class="class-color">transitionTime</span>:300</span>
+                <span><span class="label-color">},</span></span>
+             </code>
+             </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab4">
+            <md-tab-label>CSS</md-tab-label>
+            <md-tab-body>
+            <div class="wrapper">
+               <code class="highlight"><span><span class="class-color">.expandcollapse-heading-collapsed span</span>{</span>
+                  <span>font-size: 16px;</span>
+                  <span>margin:0px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.expandcollapse-heading-expanded span</span>{</span>
+                  <span>font-size: 32px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.expandcollapse-heading-collapsed</span>{</span>
+                  <span>height:20px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.expandcollapse-heading-collapsed:not(.noHover):hover</span>{</span>
+                  <span>padding-bottom: 30px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.animate-show-hide</span> {</span>
+                  <span> transition:0.2s opacity linear; </span>
+                  <span> transition-delay: 0.3s; </span>
+                  <span> opacity:1; </span>
+                  <span></span>
+                  <span>}</span>
+                     <span><span class="class-color">.animate-show-hide.ng-hide</span> {</span>
+                  <span> transition:0.2s opacity linear; </span>
+                  <span> transition-delay: 0.1s; </span>
+                  <span> opacity:0; </span>
+                  <span>}</span>
+                </code>
+                </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab5">
+            <md-tab-label>Options</md-tab-label>
+            <md-tab-body>
+              <div class="wrapper-options wrapper">
+             <span> title: string <md-tooltip md-direction="right">If the header is expanded as default. Default: false</md-tooltip></span>
+             <span> steps: array <md-tooltip md-direction="right">Title on the top left</md-tooltip></span>
+             <span> stepperApi: object <md-tooltip md-direction="right">Content that is on the left of the header</md-tooltip></span>
+             <span> id: string <md-tooltip md-direction="right">Title on the top right</md-tooltip></span>
+             </div>
+            </md-tab-body>
+          </md-tab>
+
+        </md-tabs>
+      </md-content>
     </div>
-</uib-accordion> -->
-<app-stepper title="{{$ctrl.title}}" stepper-api="$ctrl.stepperApi" steps="$ctrl.steps" id="app-stepper-demo-1"></app-stepper>
+</div>

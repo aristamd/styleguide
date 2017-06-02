@@ -6,7 +6,7 @@
       </div>
       <md-stepper
       id="{{$ctrl.id}}"
-      md-linear="false">
+      md-linear="true">
         <md-step ng-repeat="step in $ctrl.steps" md-label="{{step.title}}" md-optional="{{step.optional}}">
             <md-step-body class="wrapper" app-dynamic="step.content">
             </md-step-body>
