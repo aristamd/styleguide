@@ -7,6 +7,7 @@ import 'angular-material/angular-material.css';
 import headerExpandable from './header-expandable.component';
 import headerExpandableController from './header-expandable.controller';
 import headerDirective from './header-expandable.directive';
+import dynamicDirective from '../../common/dynamic-compile.directive';
 
 const MODULE_NAME = 'components.headerExpandable';
 
@@ -14,4 +15,5 @@ const MODULE_NAME = 'components.headerExpandable';
     .controller('HeaderExpandableController', headerExpandableController)
     .component('appHeaderAccordion', headerExpandable)
     .directive('appHeaderDirective', headerDirective)
+    .directive('appDynamic', dynamicDirective)
     .name;

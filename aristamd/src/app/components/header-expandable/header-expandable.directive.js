@@ -33,7 +33,7 @@ function HeaderExpandableDirective (){
               ctrl.promise =0;
             }
             ctrl.addExpandedAnimations = function(){
-              var hiddenContainer = angular.element(element[0].getElementsByClassName('animate-show-hide'))[0].clientHeight + 20;
+              var hiddenContainer = angular.element(element[0].getElementsByClassName('animate-show-hide'))[0].clientHeight + 25;
               ctrl.expandedContainer = (element[0].firstChild.clientHeight + hiddenContainer); 
               ctrl.isFirstTime = false;
                /*Get the height of the container to use it on the nudge animation*/
