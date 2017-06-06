@@ -32,6 +32,10 @@ function HeaderExpandableDirective (){
               ctrl.time = 0;
               ctrl.promise =0;
             }
+            ctrl.test = function(event){
+              event.stopPropagation();
+              ctrl.time = 0;
+            }
             ctrl.addExpandedAnimations = function(){
               var hiddenContainer = angular.element(element[0].getElementsByClassName('animate-show-hide'))[0].clientHeight + 25;
               ctrl.expandedContainer = (element[0].firstChild.clientHeight + hiddenContainer); 
