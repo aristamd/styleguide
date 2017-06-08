@@ -45,9 +45,9 @@
                 <span>ctrl.headerData <span class="label-color">= {</span></span> 
                 <span><span class="class-color">left</span>: 'Patient Name',</span> 
                 <span><span class="class-color">expandend</span>:false,</span> 
-                <span><span class="class-color">contentLeft</span>:</span> 
+                <span><span class="class-color">contentLeft</span>:$templateCache.get('name.html')</span> 
                 <span><span class="class-color">right</span>:'Econsult Request 12345',</span> 
-                <span><span class="class-color">contentRight</span>:'',</span> 
+                <span><span class="class-color">contentRight</span>:$templateCache.get('name.html'),</span> 
                 <span><span class="class-color">nudge</span>:true,</span> 
                 <span><span class="class-color">transitionTime</span>:300</span> 
                 <span><span class="label-color">},</span></span> 
@@ -86,23 +86,24 @@
                 </code>
                 </div>
             </md-tab-body>
-          </md-tab>
+           </md-tab>
           <md-tab id="tab5">
             <md-tab-label>Options</md-tab-label>
             <md-tab-body>
-              <div class="wrapper-options wrapper">
-             <span> isExpanded: boolean <md-tooltip md-direction="right">If the header is expanded as default. Default: false</md-tooltip></span>
-             <span> titleLeft: string <md-tooltip md-direction="right">Title on the top left</md-tooltip></span>
-             <span> contentLeft: string (template is acceptable) <md-tooltip md-direction="right">Content that is on the left of the header</md-tooltip></span>
-             <span> titleRight: string <md-tooltip md-direction="right">Title on the top right</md-tooltip></span>
-             <span> contentRight: string (template is acceptable) <md-tooltip md-direction="right">Content that is on the right of the header</md-tooltip></span>
-             <span> nudge: boolean <md-tooltip md-direction="right">Property that enable the on mouseover and on mouseout animations. Default: true</md-tooltip></span>
-             <span> transitionTime: number (300 ms default) <md-tooltip md-direction="right">Transition time for the animations</md-tooltip></span>
-             <span> app-header-directive : directive (required) <md-tooltip md-direction="right">Directive Required to apply the animations</md-tooltip></span>
-             </div>
+              <md-content>
+                <md-list>
+                  <md-list-item class="md-3-line" ng-repeat="option in $ctrl.options">
+                      <div class="md-list-item-text">
+                        <h3>{{option.name}}</h3>
+                        <h4>{{option.type}}</h4>
+                        <p>{{option.description}}</p>
+                      </div>
+                      <md-divider ng-if="!$last"></md-divider>
+                  </md-list-item>
+                </md-list>
+              </md-content>
             </md-tab-body>
-          </md-tab>
-          
+          </md-tab>       
         </md-tabs>
       </md-content>
     </div>
