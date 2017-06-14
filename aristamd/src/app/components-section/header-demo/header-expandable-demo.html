@@ -1,0 +1,110 @@
+<header class="section-header bg-light lter b-b wrapper-md">
+    <h2 class="m-n font-thin">Header Accordion</h2>
+</header>
+    <div ng-cloak>
+      <md-content class="md-padding">
+        <md-tabs class="md-accent-tab" md-selected="$ctrl.data.selectedIndex">
+            <md-tab id="tab1">
+            <md-tab-label>Example</md-tab-label>
+            <md-tab-body>
+              <div  class="wrapper">
+                 <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg')">Open full modal</button>  
+              </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab2">
+            <md-tab-label>Html</md-tab-label>
+            <md-tab-body>
+            <div class="wrapper">
+             <code class="highlight" > 
+                <span><span class="label-color">&lt;app-header-accordion</span></span> 
+                <span><span class="class-color">title-left</span><span class="label-color">=</span>"$ctrl.headerData.left"</span>
+                <span><span class="class-color">is-expanded</span><span class="label-color">=</span>"$ctrl.headerData.expandend"</span>
+                <span><span class="class-color">content-left</span><span class="label-color">=</span>"$ctrl.headerData.cleft"</span>
+                <span><span class="class-color">title-right</span><span class="label-color">=</span>"$ctrl.headerData.right"</span>
+                <span><span class="class-color">content-right</span><span class="label-color">=</span>"$ctrl.headerData.cright"</span>
+                <span><span class="class-color">nudge</span><span class="label-color">=</span>"$ctrl.headerData.nudge"</span>
+                <span><span class="class-color">transition-time</span><span class="label-color">=</span>"$ctrl.headerData.transitionTime"</span>
+                <span><span class="label-color">app-header-directive</span><span class="label-color">&gt;</span></span>
+                <span><span class="label-color">&lt;/</span><span class="label-color">app-header-accordion</span><span class="label-color">&gt;</span></span>
+                <span><span class="label-color">&lt;/div</span><span class="label-color">&gt;</span></span>
+                <span><span class="label-color">&lt;div</span> <span class="class-color">class</span><span class="label-color">=</span>"accordion-modal-body"<span class="label-color">&gt;</span></span>
+                <span>   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+                <span><span class="label-color">/div&gt;</span></span>
+                <span><span class="label-color">&lt;div </span><span class="class-color">class</span><span class="label-color">=</span>"modal-footer separator"</span>&gt;</span></span>
+                <span><span class="label-color">&lt;button </span><span class="class-color">class</span>="pull-left"&gt;Close<span class="label-color">&lt;/button&gt;</span></span>
+            </code>
+            </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab3">
+            <md-tab-label>JS</md-tab-label>
+            <md-tab-body>
+              <div class="wrapper">
+              <code class="highlight">
+                <span>ctrl.headerData <span class="label-color">= {</span></span> 
+                <span><span class="class-color">left</span>: 'Patient Name',</span> 
+                <span><span class="class-color">expandend</span>:false,</span> 
+                <span><span class="class-color">contentLeft</span>:$templateCache.get('name.html')</span> 
+                <span><span class="class-color">right</span>:'Econsult Request 12345',</span> 
+                <span><span class="class-color">contentRight</span>:$templateCache.get('name.html'),</span> 
+                <span><span class="class-color">nudge</span>:true,</span> 
+                <span><span class="class-color">transitionTime</span>:300</span> 
+                <span><span class="label-color">},</span></span> 
+             </code>
+             </div>
+            </md-tab-body>
+          </md-tab>
+          <md-tab id="tab4">
+            <md-tab-label>CSS</md-tab-label>
+            <md-tab-body>
+            <div class="wrapper">
+               <code class="highlight"><span><span class="class-color">.expandcollapse-heading-collapsed span</span>{</span>
+                  <span>font-size: 16px;</span>
+                  <span>margin:0px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.expandcollapse-heading-expanded span</span>{</span>
+                  <span>font-size: 32px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.expandcollapse-heading-collapsed</span>{</span>
+                  <span>height:20px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.expandcollapse-heading-collapsed:not(.noHover):hover</span>{</span>
+                  <span>padding-bottom: 30px;</span>
+                  <span>}</span>
+                  <span><span class="class-color">.animate-show-hide</span> {</span>
+                  <span> transition:0.2s opacity linear; </span>
+                  <span> transition-delay: 0.3s; </span>
+                  <span> opacity:1; </span>
+                  <span></span>
+                  <span>}</span>
+                     <span><span class="class-color">.animate-show-hide.ng-hide</span> {</span>
+                  <span> transition:0.2s opacity linear; </span>
+                  <span> transition-delay: 0.1s; </span>
+                  <span> opacity:0; </span>
+                  <span>}</span>
+                </code>
+                </div>
+            </md-tab-body>
+           </md-tab>
+          <md-tab id="tab5">
+            <md-tab-label>Options</md-tab-label>
+            <md-tab-body>
+              <md-content>
+                <md-list>
+                  <md-list-item class="md-3-line" ng-repeat="option in $ctrl.options">
+                      <div class="md-list-item-text">
+                        <h3>{{option.name}}</h3>
+                        <h4>{{option.type}}</h4>
+                        <p>{{option.description}}</p>
+                      </div>
+                      <md-divider ng-if="!$last"></md-divider>
+                  </md-list-item>
+                </md-list>
+              </md-content>
+            </md-tab-body>
+          </md-tab>       
+        </md-tabs>
+      </md-content>
+    </div>
+</div>

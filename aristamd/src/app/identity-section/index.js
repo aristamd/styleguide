@@ -1,7 +1,7 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import identity from './identity.component';
-import routing from './identity.config';
+import identity from './identity-section.component';
+import routing from './identity-section.config';
 
 const MODULE_NAME = 'identity';
 
