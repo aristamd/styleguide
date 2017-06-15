@@ -6,49 +6,68 @@
 .expandcollapse-heading-collapsed {
   height:64px!important;
 }
-.expandcollapse-heading-collapsed:not(.noHover):hover{
+.expandcollapse-heading-collapsed:not(.noHover):hover {
    padding-bottom: 50px;
 }
-.expandcollapse-heading-collapsed span{
-  font-size: 16px;
+.expandcollapse-heading-collapsed span {
+  font-size: 20/@em;
   margin:0px;
 }
-.expandcollapse-heading-expanded span{
-  font-size: 2em;
+.expandcollapse-heading-expanded span {
+  font-size: 32/@em;
   transition: 0.1s all linear;
   transition-delay: 0.3s;
 }
-.col-xs-12.animate-show-hide{
+.col-xs-12.animate-show-hide {
   transition:0.2s opacity linear;
   -webkit-transition-delay: 0.2s; /* Safari */
   transition-delay: 0.3s;
   opacity:1;
 }
-.col-xs-12.animate-show-hide.ng-hide{
+.col-xs-12.animate-show-hide.ng-hide {
   opacity:0;
   -webkit-transition-delay: 0.01s; /* Safari */
   transition-delay: 0.01s;
 }
-.animate-show-hide {
-    font-size: 12px;
-}
-.animate-show-hide div label:first-child {
-    font-size: 11px;
-    text-align: right;
-    margin-right:5%;
-    width: 50%;
-    color: #92C5F4;
-}
+
 .titles {
-    margin-bottom: 13px;
+    margin-bottom: 18px;
 }
-.titles span:first-child{
-    margin-left: 40px;
+.titles span:first-child {
+    padding-left: 3%;
 }
-.content-left p, .content-right p {
+
+.amd__modal-content-left label:first-child {
+    font-size: 11/@em;
+    font-weight: 300;
+}
+
+.app__header-btn,.app__header-btn:hover , .app__header-btn:focus , .app__header-btn .md-stepper-icon {
+   font-size: 11/@em;
+   color: @brand-primary;
+}
+.amd__modal-content--left {
+    width: 78%;
     text-align: right;
+    margin-right: 4%;
+    margin-bottom: 10px;
+    vertical-align: sub;
 }
-.content-right button,.content-right button:hover ,.content-right button:focus , .content-right button .md-stepper-icon{
-   font-size: 11px;
-   color: #58A7EE;
+.amd__modal-content--right-align {
+  text-align:right;
+  width: 50%;
+}
+.amd__modal-content--right-align + label {
+    margin-left: 5%;
+    width: 40%;
+}
+.app__header-icon--align {
+  vertical-align:top;
+}
+
+.app__header-content-div {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin-left: 5%;
 }

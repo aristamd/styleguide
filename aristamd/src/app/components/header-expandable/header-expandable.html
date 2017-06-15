@@ -7,11 +7,11 @@
 	    <span class="pull-left"> {{$ctrl.titleLeft}}</span>
 	    <span class="pull-right"> {{$ctrl.titleRight}}</span>
 	</div>
-    <div  class="col-xs-12 animate-show-hide no-padder" ng-show="$ctrl.isExpanded">
+    <div  class="col-xs-12 animate-show-hide" ng-show="$ctrl.isExpanded">
         <div class="row">
-            <div class="col-xs-7 no-padder" app-dynamic="$ctrl.contentLeft">
+            <div class="col-xs-6 amd__modal-content-left no-padder" app-dynamic="$ctrl.contentLeft">
             </div>
-            <div class="col-xs-5" app-dynamic="$ctrl.contentRight">
+            <div class="col-xs-6 no-padder" app-dynamic="$ctrl.contentRight">
             </div>
         </div>
     </div>
