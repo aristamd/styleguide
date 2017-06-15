@@ -1,8 +1,9 @@
 export default function importTemplates($templateCache) {
-      $templateCache.put('content-left.html', '<div><div class="col-xs-12 col-md-4"><div><label>Date of Birth</label><label>MM/DD/YYYY</label></div><div><label>Age</label><label>##</label></div>'+
-        '<div><label>Gender</label><label>M/F</label></div><div><label>Medical Record Number</label><label>987564123</label></div></div>'+
-        '<div class="col-xs-12 col-md-4 content-left"><div><label>Home Address</label><label>Address Line 1</label></div><div><label>Primary Phone</label><label>(###)###-####</label><div></div></div>');
-    	  $templateCache.put('content-right.html', '<div class="content-right pull-right"><div class="col-sm-7"><p>Pending Assessments and Diagnostics</p><button class="btn btn-default" ng-click="$ctrl.test($event)">'+
-    	  	'Routine Visit Note Captured <md-icon md-svg-icon="steppers-check" class="md-stepper-icon ng-scope"  role="img" aria-label="steppers-check"></button></div><div class="col-sm-2 no-padder">'+
-    	  	'<md-icon md-svg-icon="steppers-check" class="md-stepper-icon ng-scope"  role="img" aria-label="steppers-check"></md-icon></div></div>');
+      $templateCache.put('content-left.html', '<div class="col-sm-8 col-md-7 col-lg-5 content-left"><div><label class="amd__modal-content--right-align">Date of Birth</label><label>MM/DD/YYYY</label></div><div><label class="amd__modal-content--right-align">Age</label><label>##</label></div>'+
+        '<div><label class="amd__modal-content--right-align">Gender</label><label>M/F</label></div><div><label class="amd__modal-content--right-align">Medical Record Number</label><label>987564123</label></div></div>'+
+        '<div class="col-xs-12 col-md-5 content-right"><div><label>Home Address</label><div class="app__header-content-div">Address Line 1</div></div><div><label>Primary Phone</label><div class="app__header-content-div">(###)###-####</div><div></div>');
+    	  $templateCache.put('content-right.html', 
+    	  	'<div class="col-sm-12 no-padder"><div class="col-sm-5"></div><div class="col-sm-9 col-md-5 no-padder pull-right"><label>Pending Assessments and Diagnostics </label><md-icon md-svg-icon="steppers-check" class="md-stepper-icon app__header-icon--align" role="img" aria-label="steppers-check"></md-icon></div></div>'+
+    	  	'<div class="col-sm-12 no-padder"><button class="btn btn-default" ng-click="$ctrl.test($event)">Routine Visit Note Captured <md-icon md-svg-icon="steppers-check" class="md-stepper-icon ng-scope" '+
+    	  	'role="img" aria-label="steppers-check"></button></div>');
 }

@@ -10,7 +10,7 @@ class HeaderDemoController {
         right:'eConsult Request 12345',
         cright:$templateCache.get('content-right.html'),
         nudge:true,
-        transitionTime:400
+        transitionTime:300
       };
       ctrl.options = [
       {

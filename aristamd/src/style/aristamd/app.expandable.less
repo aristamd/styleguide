@@ -10,11 +10,11 @@
    padding-bottom: 50px;
 }
 .expandcollapse-heading-collapsed span{
-  font-size: 16px;
+  font-size: 1.571em;
   margin:0px;
 }
 .expandcollapse-heading-expanded span{
-  font-size: 2em;
+  font-size: 2.143em;
   transition: 0.1s all linear;
   transition-delay: 0.3s;
 }
@@ -32,23 +32,50 @@
 .animate-show-hide {
     font-size: 12px;
 }
-.animate-show-hide div label:first-child {
-    font-size: 11px;
-    text-align: right;
+.amd__modal-content-left div label:first-child{
+ font-size: 0.917em;
+    font-weight: 300;
+    color: #CCE4FA;
+  
+}
+.content-left label:first-child {
+    width: 51%;
+}
+.content-left div label:nth-child(2) {
+    margin-left: 5%;
+    width: 40%;
+}
+.content-right div label:nth-child(2) {
+    margin-left: 5%;
+}
+.amd__modal-content--right-align label{
     margin-right:5%;
-    width: 50%;
-    color: #92C5F4;
+   margin-bottom: 4%;
+    width: 64%;
 }
 .titles {
-    margin-bottom: 13px;
+    margin-bottom: 18px;
 }
 .titles span:first-child{
-    margin-left: 40px;
+    margin-left: 3%;
 }
-.content-left p, .content-right p {
-    text-align: right;
-}
-.content-right button,.content-right button:hover ,.content-right button:focus , .content-right button .md-stepper-icon{
+
+.amd__modal-content--right-align button,.amd__modal-content--right-align button:hover ,.amd__modal-content--right-align button:focus , .amd__modal-content--right-align button .md-stepper-icon{
    font-size: 11px;
    color: #58A7EE;
+}
+
+.amd__modal-content--right-align{
+  text-align:right
+}
+
+.app__header-icon--align{
+  vertical-align:top;
+}
+
+.app__header-content-div{
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin-left: 5%;
 }
