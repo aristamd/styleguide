@@ -12,7 +12,7 @@ export default class HeaderExpandableController {
     };
     
     /*Functin that allow users copy the text of the accordion without collapsed*/
-    ctrl.mouseDown = function() {
+    ctrl.mouseDown = function () {
       if (!ctrl.onProcess) {
         ctrl.promise = setInterval(function () { 
         ctrl.time = ctrl.time + 1;
