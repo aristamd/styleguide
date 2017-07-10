@@ -6,12 +6,25 @@ var accordion = {
   }
 }
 
+AccordionController.$inject = ['$timeout']
 
-function AccordionController () {
+function AccordionController ($timeout) {
   var ctrl = this;
 
   ctrl.$onInit = function () {
       ctrl.isOpen = false;
+  }
+
+  ctrl.toggleAccordion = function () {
+    if(ctrl.isOpen === false){
+      ctrl.isLoading = true;
+      $timeout(function () {
+        ctrl.isLoading = false;
+        ctrl.isOpen = !ctrl.isOpen;
+     }, 1000);
+   } else {
+     ctrl.isOpen = !ctrl.isOpen;
+   }
   }
 }
 

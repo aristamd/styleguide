@@ -4,9 +4,10 @@
       <div class="md-toolbar-tools">
         <div layout="row">
           <div layout="column" layout-align="center center" class="m-r-sm">
-            <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
-              <md-icon md-font-icon="icon-home"></md-icon>
-            </md-button>
+              <span class="fa-stack">
+                <i class="fa fa-circle-o fa-stack-2x"></i>
+                <i class="fa fa-thermometer-quarter fa-stack-1x"></i>
+              </span>
           </div>
           <div layout="column"  class="layout-max-width">
             <div flex>
@@ -20,8 +21,9 @@
           </div>
            <div layout="column" layout-align="center center">
             <div>
-              <button class="app__stepper-button pull-right" ng-click="$ctrl.isOpen = !$ctrl.isOpen">
-                >
+              <button class="app__stepper-button pull-right" ng-click="$ctrl.toggleAccordion()">
+                <i class="fa fa-spinner fa-pulse fa-fw" ng-show="$ctrl.isLoading"></i>
+                <i class="fa" ng-show="!$ctrl.isLoading" ng-class="$ctrl.isOpen ? 'fa-chevron-down' : 'fa-chevron-right'"></i>
               </button>
             </div>
           </div>
