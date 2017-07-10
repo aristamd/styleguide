@@ -1,18 +1,31 @@
 <div ng-cloak>
   <md-content>
-    <br>
     <md-toolbar class="md-hue-2">
       <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
-          <md-icon md-font-icon="icon-home"></md-icon>
-        </md-button>
-
-        <h2 flex md-truncate>Basic Metabolic Panel</h2>
-        <button class="app__stepper-button" ng-click="$ctrl.isOpen = !$ctrl.isOpen">></button>
-
-        <md-button class="md-icon-button" aria-label="More">
-          <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
-        </md-button>
+        <div layout="row">
+          <div layout="column" layout-align="center center" class="m-r-sm">
+            <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+              <md-icon md-font-icon="icon-home"></md-icon>
+            </md-button>
+          </div>
+          <div layout="column"  class="layout-max-width">
+            <div flex>
+              <h4>Basic Metabolic Panel</h4>
+            </div>
+            <div flex class="accordion__description">
+              <span>Ordered New</span>
+              <label class="font-light m-l-lg">Date: </label>
+              <label class="m-l-xs">10/10/2017</label>
+            </div>
+          </div>
+           <div layout="column" layout-align="center center">
+            <div>
+              <button class="app__stepper-button pull-right" ng-click="$ctrl.isOpen = !$ctrl.isOpen">
+                >
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </md-toolbar>
     <div class="accordion__content" ng-show="$ctrl.isOpen">
@@ -23,9 +36,6 @@
         <div>Excepturi commodi, praesentium cum laborum maxime! In repudiandae sunt magnam placeat esse rem assumenda laboriosam facilis enim, qui dolorem dolor veniam quod quasi nemo, non illo quam est, perferendis ut!</div>
         <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
       </div>
-    </div
-
-    <br>
-
+    </div>
   </md-content>
 </div>
