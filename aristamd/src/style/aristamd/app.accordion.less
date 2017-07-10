@@ -1,40 +1,52 @@
 .accordion__content {
-	overflow: scroll;
+	background: @body-bg;
+	overflow: auto;
+	padding: 0px 30px 10px;
+}
+.animate-show-hide {
+  transition:0.2s all ease-in-out;
+  -webkit-transition-delay: 0.1s; /* Safari */
+  transition-delay: 0.1s;
+  opacity:1;
+}
+.animate-show-hide.ng-hide {
+  opacity:0;
+  -webkit-transition-delay: 0.01s; /* Safari */
+  transition-delay: 0.01s;
 }
 
 .accordion__content--padding {
 	padding: 10px;
 }
-
 md-toolbar._md._md-toolbar-transitions {
 	background: @body-bg;
 	color: @text-color;
 	border-top: 1px solid @border-color;
-    border-bottom: 1px solid @border-color;
-}
 
+}
+.no-border {
+	border-bottom: none!important;
+}
+app-accordion:last-child  md-toolbar {
+	border-bottom: 1px solid @border-color;
+}
 md-toolbar h4{
     font-weight: bold;
     display: inline-block;
 }
-
 .layout-row {
 	height: 100%;
     width: 100%;
 }
-
 .accordion__description{
     font-size: 14px;
 }
-
 .layout-max-width {
 	width: 100%;
 }
-
 .font-light {
 	color: @text-muted;
 }
-
 button.md-icon-button.md-button.md-ink-ripple {
     background: rebeccapurple;
 }

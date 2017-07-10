@@ -1,6 +1,6 @@
 <div ng-cloak>
   <md-content>
-    <md-toolbar class="md-hue-2">
+    <md-toolbar class="md-hue-2" ng-class="{'no-border':$ctrl.isOpen}">
       <div class="md-toolbar-tools">
         <div layout="row">
           <div layout="column" layout-align="center center" class="m-r-sm">
@@ -28,13 +28,16 @@
         </div>
       </div>
     </md-toolbar>
-    <div class="accordion__content" ng-show="$ctrl.isOpen">
+    <div class="accordion__content animate-show-hide" ng-show="$ctrl.isOpen">
       <div class="accordion__content--padding">
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nam at non amet tempore delectus itaque suscipit molestiae quas, saepe soluta officia veniam, iste recusandae ipsa esse maxime, sint aspernatur.</div>
         <div>Minima, harum nulla praesentium. Corporis molestiae et perspiciatis quaerat architecto. Ad eligendi unde esse nesciunt, facere repellat? Eius laboriosam, dolor. Ullam culpa nobis autem assumenda voluptatibus magnam, illum voluptatum delectus.</div>
         <div>Nihil recusandae ab, provident distinctio numquam voluptas a eveniet autem, aspernatur dolorum, odit expedita fugiat saepe. Impedit sapiente numquam, sed magni expedita magnam veritatis animi error odio perferendis, cumque sit?</div>
         <div>Excepturi commodi, praesentium cum laborum maxime! In repudiandae sunt magnam placeat esse rem assumenda laboriosam facilis enim, qui dolorem dolor veniam quod quasi nemo, non illo quam est, perferendis ut!</div>
         <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
+          <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
+            <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
+              <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
       </div>
     </div>
   </md-content>
