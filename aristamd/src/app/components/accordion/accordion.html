@@ -1,6 +1,6 @@
 <div ng-cloak>
   <md-content>
-    <md-toolbar class="md-hue-2" ng-class="{'no-border':$ctrl.isOpen}">
+    <md-toolbar class="md-hue-2" ng-class="{'no-border':$ctrl.isOpen}" ng-click="$ctrl.toggleAccordion()">
       <div class="md-toolbar-tools">
         <div layout="row">
           <div layout="column" layout-align="center center" class="m-r-sm">
@@ -21,27 +21,26 @@
           </div>
           <div layout="column" layout-align="center center">
             <div>
-              <button class="app__accordion-default-button" ng-click="$ctrl.isMarked = !$ctrl.isMarked"
+              <button class="app__accordion-default-button" ng-click="$ctrl.toggleMarked($event)"
               ng-class="{'app__accordion-white-button': !$ctrl.isMarked, 'app__accordion-gray-button': $ctrl.isMarked}">
                 <i class="fa fa-check" ng-show="$ctrl.isMarked" aria-hidden="true"></i>
-                <span>{{ $ctrl.isMarked ? 'Marked as Available' : 'Mark as Available'}} </span>               
+                <span>{{ $ctrl.isMarked ? 'Marked as Available' : 'Mark as Available'}} </span>
               </button>
             </div>
           </div>
           <div layout="column" layout-align="center center">
             <div>
-              <button class="app__accordion-default-button" ng-click="$ctrl.isOrdered = !$ctrl.isOrdered"
+              <button class="app__accordion-default-button" ng-click="$ctrl.toggleOrdered($event)"
               ng-class="{'app__accordion-blue-button': !$ctrl.isOrdered, 'app__accordion-gray-button': $ctrl.isOrdered}">
                 <i class="fa fa-check" ng-show="$ctrl.isOrdered" aria-hidden="true"></i>
-                <span>{{ $ctrl.isOrdered ? 'Ordered' : 'Order New'}} </span>               
+                <span>{{ $ctrl.isOrdered ? 'Ordered' : 'Order New'}} </span>
               </button>
             </div>
           </div>
            <div layout="column" layout-align="center center">
             <div>
-              <button class="app__accordion-arrow-button pull-right" ng-click="$ctrl.toggleAccordion()">
-                <i class="fa fa-spinner fa-pulse fa-fw" ng-show="$ctrl.isLoading"></i>
-                <i class="fa" ng-show="!$ctrl.isLoading" ng-class="$ctrl.isOpen ? 'fa-chevron-down' : 'fa-chevron-right'"></i>
+              <button class="app__accordion-arrow-button pull-right">
+                <i ng-class="$ctrl.accordionClass"></i>
               </button>
             </div>
           </div>
@@ -55,9 +54,19 @@
         <div>Nihil recusandae ab, provident distinctio numquam voluptas a eveniet autem, aspernatur dolorum, odit expedita fugiat saepe. Impedit sapiente numquam, sed magni expedita magnam veritatis animi error odio perferendis, cumque sit?</div>
         <div>Excepturi commodi, praesentium cum laborum maxime! In repudiandae sunt magnam placeat esse rem assumenda laboriosam facilis enim, qui dolorem dolor veniam quod quasi nemo, non illo quam est, perferendis ut!</div>
         <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
-          <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
-            <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
-              <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
+        <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
+        <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
+        <div>Veniam provident laboriosam officia cum a vero, aperiam, atque illo architecto et ex sit perferendis, ducimus nobis dolor consectetur ut repellat dolores explicabo iste? Officiis, quas, delectus? Atque obcaecati, saepe.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quasi totam quae perferendis accusantium atque voluptatum praesentium consequatur, voluptates a assumenda amet, expedita rerum quis culpa beatae earum distinctio veniam!</div>
+        <div>Molestias iste, omnis, nam explicabo voluptatum facere. Veritatis ea accusamus officia saepe cupiditate amet, quisquam, culpa velit ipsa architecto accusantium consequatur odit illo totam quas porro asperiores, vel maiores earum.</div>
+        <div>At, culpa quibusdam doloribus asperiores. Corrupti eum recusandae deserunt obcaecati rerum, quaerat quibusdam omnis earum distinctio, praesentium facilis debitis reprehenderit accusamus! Ipsam maxime, quisquam. Ducimus, adipisci! Aut, praesentium eaque laudantium?</div>
+        <div>Quaerat fugiat sit earum quidem dolor rem placeat recusandae hic facilis omnis magni, nobis fuga. Delectus blanditiis ex molestias odit, consequuntur quod ratione dolor magni, et quos neque quas est?</div>
+        <div>Temporibus repellendus, voluptatem, minus id veritatis doloremque illum debitis obcaecati est laborum quae facilis, vero dolorum eum commodi. Dicta error consequuntur accusantium debitis aliquid eveniet dignissimos atque labore adipisci ipsa.</div>
+        <div>Maxime sequi voluptatem consequatur cumque alias ipsa iusto necessitatibus provident velit dolores ab, corporis, inventore, eos officiis molestias. Esse obcaecati vero quidem corporis praesentium deserunt voluptatem libero pariatur molestiae aut!</div>
+        <div>In soluta aut id omnis praesentium dolorem deserunt facere doloribus est labore blanditiis, illo, quisquam aliquid placeat voluptatem laborum aperiam, dolore ipsa commodi fugit eligendi eius quaerat nostrum ratione ad.</div>
+        <div>Et natus id amet architecto, aperiam perferendis nobis voluptas modi, iusto illum nihil voluptatem sequi reiciendis. Doloribus inventore voluptatum eius delectus natus eos quo cumque, non labore. Nesciunt, cum, aperiam.</div>
+        <div>Reprehenderit ipsum impedit iste, dolorem omnis aspernatur dolore optio excepturi vero soluta totam ducimus quasi. Ut minima cum impedit officiis ipsa distinctio soluta atque, voluptatem, architecto recusandae odio delectus, vitae!</div>
+        <div>Distinctio adipisci veniam, rerum cum, sunt magni qui odit fuga? Alias voluptas, harum, consequuntur officia delectus sint eveniet! Fugit consectetur quia temporibus. Veritatis rerum porro rem ullam, est neque quibusdam.</div>
       </div>
     </div>
   </md-content>
