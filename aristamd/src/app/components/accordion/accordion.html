@@ -19,6 +19,15 @@
               <label class="m-l-xs">10/10/2017</label>
             </div>
           </div>
+          <div layout="column" layout-align="center center">
+            <div>
+              <button class="app__accordion-order-button" ng-click="$ctrl.isOrdered = !$ctrl.isOrdered"
+              ng-class="{'app__accordion-new': !$ctrl.isOrdered, 'app__accordion-ordered': $ctrl.isOrdered}">
+                <i class="fa fa-check" ng-show="$ctrl.isOrdered" aria-hidden="true"></i>
+                <span>{{ $ctrl.isOrdered ? 'Ordered' : 'Order New'}} </span>               
+              </button>
+            </div>
+          </div>
            <div layout="column" layout-align="center center">
             <div>
               <button class="app__accordion-button pull-right" ng-click="$ctrl.toggleAccordion()">

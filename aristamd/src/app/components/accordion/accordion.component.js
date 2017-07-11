@@ -13,6 +13,7 @@ function AccordionController ($timeout) {
 
   ctrl.$onInit = function () {
       ctrl.isOpen = false;
+      ctrl.isOrdered = false;
   }
 
   ctrl.toggleAccordion = function () {
