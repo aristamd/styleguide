@@ -10,6 +10,8 @@ import stepperModal from './stepper-demo/stepper-modal.component';
 import headerDemo from './header-demo/header-expandable-demo.component';
 import headerModal from './header-demo/header-expandable-modal.component';
 
+import accordionHeader1 from './accordion-demo/accordion-header-1.component';
+import accordionHeader2 from './accordion-demo/accordion-header-2.component';
 import accordionDemo from './accordion-demo/accordion-demo.component';
 
 import components from '../components';
@@ -23,6 +25,8 @@ const MODULE_NAME = 'components-section';
     .component('stepperModal', stepperModal)
     .component('headerDemo', headerDemo)
     .component('headerModal', headerModal)
+    .component('accordionHeader1', accordionHeader1)
+    .component('accordionHeader2', accordionHeader2)
     .component('accordionDemo', accordionDemo)
     .component('componentsSection', componentsSection)
     .run(['$templateCache', function ($templateCache) {

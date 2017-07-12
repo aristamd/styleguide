@@ -10,7 +10,19 @@
             </md-tab-label>
             <md-tab-body>
               <div  class="wrapper">
-                <app-accordion></app-accordion>
+                <app-accordion
+                  id="accordion-1"
+                  header-content="$ctrl.headerContent1"
+                  body-content="$ctrl.bodyContent"
+                  register-api="$ctrl.registerApi($event)"
+                  >
+                </app-accordion>
+                <app-accordion
+                  id="accordion-2"
+                  header-content="$ctrl.headerContent2"
+                  body-content="$ctrl.bodyContent"
+                  >
+                </app-accordion>
               </div>
             </md-tab-body>
           </md-tab>

@@ -3,6 +3,11 @@ class AccordionDemoController {
     const ctrl = this;
 
     ctrl.$onInit = function () {
+
+      ctrl.headerContent1 = '<accordion-header-1></accordion-header-1>';
+      ctrl.headerContent2 = '<accordion-header-2></accordion-header-2>';
+      ctrl.bodyContent = require('./accordion-content.template.html');
+
        ctrl.options = [
       {
         name:'title',
@@ -26,7 +31,6 @@ class AccordionDemoController {
       },
       ]
     }
-
 
     ctrl.open = function (size, parentSelector) {
       var modalInstance = $uibModal.open({

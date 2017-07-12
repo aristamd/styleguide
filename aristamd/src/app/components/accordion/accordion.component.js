@@ -3,42 +3,51 @@ var accordion = {
   template: require('./accordion.html'),
   controller: AccordionController,
   bindings: {
+    headerContent: '<',
+    bodyContent: '<',
+    id:'@',
   }
 }
 
-AccordionController.$inject = ['$timeout']
+AccordionController.$inject = ['$timeout', 'communicationCenterService']
 
-function AccordionController ($timeout) {
+function AccordionController ($timeout, communicationCenterService) {
   var ctrl = this;
+  var latestClass = 'fa fa-chevron-right';
 
   ctrl.$onInit = function () {
+      if (angular.isUndefined(ctrl.id)) {
+        throw('AristaMD Accordion Error: accordion needs an id');
+      }
+
       ctrl.isOpen = false;
-      ctrl.isOrdered = false;
-      ctrl.isMarked = false;
       ctrl.accordionClass = 'fa fa-chevron-right';
-  }
+      ctrl.accordionChannel = communicationCenterService.createChannel(ctrl.id);
 
-  ctrl.toggleAccordion = function () {
-    if(ctrl.isOpen === false){
-      ctrl.accordionClass = 'fa fa-spinner fa-pulse fa-fw';
-      $timeout(function () {
-        ctrl.isOpen = !ctrl.isOpen;
-        ctrl.accordionClass = 'fa fa-chevron-down';
-     }, 1000);
-   } else {
-     ctrl.accordionClass = 'fa fa-chevron-right';
-     ctrl.isOpen = !ctrl.isOpen;
-   }
-  }
+      ctrl.accordionChannel.on('onToggleAccordion')
+      .subscribe(function (forceState) {
+        ctrl.toggleAccordion(forceState);
+      });
 
-  ctrl.toggleMarked = function (event) {
-    event.stopPropagation();
-    ctrl.isMarked = !ctrl.isMarked;
-  }
+      ctrl.toggleAccordion = function (forceState) {
+        if (!angular.isUndefined(forceState)) {
+          ctrl.accordionClass = forceState === true ? 'fa fa-chevron-down' : 'fa fa-chevron-right';
+          ctrl.isOpen = forceState;
+        } else {
+          ctrl.accordionClass = ctrl.isOpen === false ? 'fa fa-chevron-down' : 'fa fa-chevron-right';
+          ctrl.isOpen = !ctrl.isOpen;
+        }
+      }
 
-  ctrl.toggleOrdered = function (event) {
-    event.stopPropagation();
-    ctrl.isOrdered = !ctrl.isOrdered;
+      ctrl.accordionChannel.on('onSetLoadingState')
+      .subscribe(function (isLoading) {
+        if (isLoading === true) {
+          latestClass =  ctrl.accordionClass;
+          ctrl.accordionClass = 'fa fa-spinner fa-pulse fa-fw';
+        } else {
+          ctrl.accordionClass = latestClass;
+        }
+      });
   }
 }
 
