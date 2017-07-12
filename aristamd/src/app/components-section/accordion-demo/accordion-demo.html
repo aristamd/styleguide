@@ -14,7 +14,6 @@
                   id="accordion-1"
                   header-content="$ctrl.headerContent1"
                   body-content="$ctrl.bodyContent"
-                  register-api="$ctrl.registerApi($event)"
                   >
                 </app-accordion>
                 <app-accordion
@@ -31,11 +30,9 @@
             <md-tab-body>
             <div class="wrapper">
              <code class="highlight" >
-                <span><span class="label-color">&lt;app-stepper</span></span>
-                <span><span class="class-color">title</span><span class="label-color">=</span>"brackets $ctrl.title brackets"</span>
-                <span><span class="class-color">stepper-api</span><span class="label-color">=</span>"$ctrl.stepperApi"</span>
-                <span><span class="class-color">steps</span><span class="label-color">=</span>"$ctrl.steps"</span>
-                <span><span class="class-color">id</span><span class="label-color">=</span>"app-stepper-demo-1"</span>
+                <span><span class="label-color">&lt;app-accordion</span></span>
+                <span><span class="class-color">header-content</span><span class="label-color">=</span>"$ctrl.headerContent1"</span>
+                <span><span class="class-color">body-content</span><span class="label-color">=</span>"$ctrl.bodyContent"</span>
                 <span><span class="label-color">&lt;/</span><span class="label-color">app-stepper</span><span class="label-color">&gt;</span></span>
             </code>
             </div>
