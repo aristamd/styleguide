@@ -26,7 +26,7 @@
   <div>
     <button class="app__accordion-default-button" ng-click="$ctrl.toggleOrdered($event)" ng-disabled="$ctrl.isOrdered"
     ng-class="{'app__accordion-blue-button': !$ctrl.isOrdered, 'app__accordion-gray-button': $ctrl.isOrdered}">
-      <i class="fa fa-check" ng-show="$ctrl.isOrdered" aria-hidden="true"></i>
+      <i class="fa fa-check" ng-if="$ctrl.isOrdered" aria-hidden="true"></i>
       <span>{{ $ctrl.isOrdered ? 'Ordered' : 'Order'}} </span>
     </button>
   </div>

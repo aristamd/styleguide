@@ -16,7 +16,7 @@ function AccordionController ($timeout, communicationCenterService) {
   var latestClass = 'fa fa-chevron-right';
 
   ctrl.$onInit = function () {
-      if (angular.isUndefined(ctrl.id)) {
+      if (!ctrl.id) {
         throw('AristaMD Accordion Error: accordion needs an id');
       }
 
@@ -31,7 +31,7 @@ function AccordionController ($timeout, communicationCenterService) {
 
       ctrl.toggleAccordion = function (forceState) {
         if (!angular.isUndefined(forceState)) {
-          ctrl.accordionClass = forceState === true ? 'fa fa-chevron-down' : 'fa fa-chevron-right';
+          ctrl.accordionClass = forceState ? 'fa fa-chevron-down' : 'fa fa-chevron-right';
           ctrl.isOpen = forceState;
         } else {
           ctrl.accordionClass = ctrl.isOpen === false ? 'fa fa-chevron-down' : 'fa fa-chevron-right';
@@ -41,7 +41,7 @@ function AccordionController ($timeout, communicationCenterService) {
 
       ctrl.accordionChannel.on('onSetLoadingState')
       .subscribe(function (isLoading) {
-        if (isLoading === true) {
+        if (isLoading) {
           latestClass =  ctrl.accordionClass;
           ctrl.accordionClass = 'fa fa-spinner fa-pulse fa-fw';
         } else {

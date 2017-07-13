@@ -14,14 +14,12 @@
                   id="accordion-1"
                   header-content="$ctrl.headerContent1"
                   body-content="$ctrl.bodyContent"
-                  >
-                </app-accordion>
+                  ></app-accordion>
                 <app-accordion
                   id="accordion-2"
                   header-content="$ctrl.headerContent2"
                   body-content="$ctrl.bodyContent"
-                  >
-                </app-accordion>
+                  ></app-accordion>
               </div>
             </md-tab-body>
           </md-tab>
@@ -33,6 +31,7 @@
                 <span><span class="label-color">&lt;app-accordion</span></span>
                 <span><span class="class-color">header-content</span><span class="label-color">=</span>"$ctrl.headerContent1"</span>
                 <span><span class="class-color">body-content</span><span class="label-color">=</span>"$ctrl.bodyContent"</span>
+                <span><span class="class-color">id</span><span class="label-color">=</span>"$ctrl.id"</span>
                 <span><span class="label-color">&lt;/</span><span class="label-color">app-stepper</span><span class="label-color">&gt;</span></span>
             </code>
             </div>
@@ -43,10 +42,13 @@
             <md-tab-body>
               <div class="wrapper">
               <code class="highlight">
-                <span>ctrl.title <span class="label-color">= 'Example 2';</span></span>
-                <span>ctrl.stepperApi <span class="label-color">= '{}';</span></span>
-                <span>ctrl.steps <span class="label-color">= '{}';</span></span>
-                <span>ctrl.id <span class="label-color">= 'app-stepper-demo-2';</span></span>
+                <span>ctrl.headerContent <span class="label-color">= '&lt;accordion-header-1&gt;&lt;/accordion-header-1&gt;';</span></span>
+                <span>ctrl.bodyContent <span class="label-color">= require('./accordion-content.template.html');</span></span>
+                <span>ctrl.id <span class="label-color">= 'accordion-1';</span></span>
+                <br />
+                <span>ctrl.accordionChannel <span class="label-color">= communicationCenterService.createChannel('accordion-1');</span></span>
+                <span>ctrl.accordionChannel.post('onSetLoadingState', true);</span></span>
+                <span>ctrl.accordionChannel.post('onToggleAccordion', false);</span></span>
              </code>
              </div>
             </md-tab-body>
@@ -55,29 +57,19 @@
             <md-tab-label>CSS</md-tab-label>
             <md-tab-body>
             <div class="wrapper">
-               <code class="highlight"><span><span class="class-color">.expandcollapse-heading-collapsed span</span>{</span>
-                  <span>font-size: 16px;</span>
-                  <span>margin:0px;</span>
+               <code class="highlight"><span><span class="class-color">.accordion__content</span>{</span>
+                  <span>background: @body-bg;</span>
+                  <span>overflow: auto;</span>
+                  <span>padding: 10px 30px 10px;</span>
                   <span>}</span>
-                  <span><span class="class-color">.expandcollapse-heading-expanded span</span>{</span>
-                  <span>font-size: 32px;</span>
+                  <span><span class="class-color">.app__accordion-blue-button</span>{</span>
+                  <span>background: @brand-primary;</span>
+                  <span>color: white;</span>
                   <span>}</span>
-                  <span><span class="class-color">.expandcollapse-heading-collapsed</span>{</span>
-                  <span>height:20px;</span>
-                  <span>}</span>
-                  <span><span class="class-color">.expandcollapse-heading-collapsed:not(.noHover):hover</span>{</span>
-                  <span>padding-bottom: 30px;</span>
-                  <span>}</span>
-                  <span><span class="class-color">.animate-show-hide</span> {</span>
-                  <span> transition:0.2s opacity linear; </span>
-                  <span> transition-delay: 0.3s; </span>
-                  <span> opacity:1; </span>
-                  <span></span>
-                  <span>}</span>
-                     <span><span class="class-color">.animate-show-hide.ng-hide</span> {</span>
-                  <span> transition:0.2s opacity linear; </span>
-                  <span> transition-delay: 0.1s; </span>
-                  <span> opacity:0; </span>
+                  <span><span class="class-color">.app__accordion-gray-button</span>{</span>
+                  <span>background: #E6E6E6;</span>
+                  <span>color: @text-muted;</span>
+                  <span>border: 1px solid #B1B1B1;</span>
                   <span>}</span>
                 </code>
                 </div>

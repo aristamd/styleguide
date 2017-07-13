@@ -8,11 +8,12 @@
   -webkit-transition-delay: 0.1s; /* Safari */
   transition-delay: 0.1s;
   opacity:1;
-}
-.animate-show-hide.ng-hide {
-  opacity:0;
-  -webkit-transition-delay: 0.01s; /* Safari */
-  transition-delay: 0.01s;
+
+  &.ng-hide {
+    opacity:0;
+    -webkit-transition-delay: 0.01s; /* Safari */
+    transition-delay: 0.01s;
+  }
 }
 md-toolbar._md._md-toolbar-transitions {
     background: @body-bg;

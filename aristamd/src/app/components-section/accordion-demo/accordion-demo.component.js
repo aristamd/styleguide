@@ -1,48 +1,34 @@
 class AccordionDemoController {
   constructor($scope, $uibModal, $timeout, communicationCenterService) {
-    const ctrl = this;
+  }
 
-    ctrl.$onInit = function () {
+  $onInit() {
 
-      ctrl.headerContent1 = '<accordion-header-1></accordion-header-1>';
-      ctrl.headerContent2 = '<accordion-header-2></accordion-header-2>';
-      ctrl.bodyContent = require('./accordion-content.template.html');
+    this.headerContent1 = '<accordion-header-1></accordion-header-1>';
+    this.headerContent2 = '<accordion-header-2></accordion-header-2>';
+    this.bodyContent = require('./accordion-content.template.html');
 
-       ctrl.options = [
-      {
-        name:'title',
-        type:'string',
-        description:''
-      },
-      {
-        name:'steps',
-        type:'array',
-        description:''
-      },
-      {
-        name:'stepperApi',
-        type:'object',
-        description:''
-      },
-      {
-        name:'id',
-        type:'string',
-        description:''
-      },
-      ]
-    }
-
-    ctrl.open = function (size, parentSelector) {
-      var modalInstance = $uibModal.open({
-        animation: true,
-        component: 'stepperModal',
-        size: size,
-      });
-    }
+     this.options = [
+    {
+      name:'header-content',
+      type:'string',
+      description:'Content for the accordion header. This accepts html, directives and components.'
+    },
+    {
+      name:'body-content',
+      type:'string',
+      description:'Content for the body header. This accepts html, directives and components.'
+    },
+    {
+      name:'id',
+      type:'string',
+      description:'Component id. Unique identifier added to the html and used to create the communication channel.'
+    },
+    ]
   }
 }
 
-let accordionDemo = {
+const accordionDemo = {
   template: require('./accordion-demo.html'),
   controller: AccordionDemoController,
 }

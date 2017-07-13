@@ -1,32 +1,32 @@
 class AccordionHeader2Controller {
   constructor($timeout, communicationCenterService) {
-    const ctrl = this;
+    this.$timeout = $timeout;
+    this.communicationCenterService = communicationCenterService;
+  }
 
-    ctrl.$onInit = function () {
-      ctrl.isOrdered = false;
-      ctrl.isMarked = false;
-      ctrl.accordionChannel = communicationCenterService.createChannel('accordion-2');
-    }
+  $onInit() {
+    this.isOrdered = false;
+    this.isMarked = false;
+    this.accordionChannel = this.communicationCenterService.createChannel('accordion-2');
+  }
 
-    ctrl.toggleMarked = function (event) {
-      debugger;
-      event.stopPropagation();
-      ctrl.isMarked = !ctrl.isMarked;
-    }
+  toggleMarked(event) {
+    event.stopPropagation();
+    this.isMarked = !this.isMarked;
+  }
 
-    ctrl.toggleOrdered = function (event) {
-      event.stopPropagation();
-      ctrl.accordionChannel.post('onSetLoadingState', true);
-      $timeout(function (){
-        ctrl.accordionChannel.post('onSetLoadingState', false);
-        ctrl.accordionChannel.post('onToggleAccordion', false);
-      },1000);
-      ctrl.isOrdered = !ctrl.isOrdered;
-    }
+  toggleOrdered(event) {
+    event.stopPropagation();
+    this.accordionChannel.post('onSetLoadingState', true);
+    this.$timeout(() => {
+      this.accordionChannel.post('onSetLoadingState', false);
+      this.accordionChannel.post('onToggleAccordion', false);
+    },1000);
+    this.isOrdered = !this.isOrdered;
   }
 }
 
-let accordionHeader2 = {
+const accordionHeader2 = {
   template: require('./accordion-header-2.template.html'),
   controller: AccordionHeader2Controller,
 }
