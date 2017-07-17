@@ -1,0 +1,90 @@
+.accordion__content {
+    background: @body-bg;
+    overflow: auto;
+    padding: 10px 30px 10px;
+}
+.animate-show-hide {
+  transition:0.2s all ease-in-out;
+  -webkit-transition-delay: 0.1s; /* Safari */
+  transition-delay: 0.1s;
+  opacity:1;
+
+  &.ng-hide {
+    opacity:0;
+    -webkit-transition-delay: 0.01s; /* Safari */
+    transition-delay: 0.01s;
+  }
+}
+md-toolbar._md._md-toolbar-transitions {
+    background: @body-bg;
+    color: @text-color;
+    border-top: 1px solid @border-color;
+}
+app-accordion:last-child  md-toolbar {
+    border-bottom: 1px solid @border-color;
+}
+app-accordion md-toolbar.no-border {
+    border-bottom: none;
+}
+md-toolbar h4{
+    font-weight: bold;
+    display: inline-block;
+}
+.layout-row {
+    height: 100%;
+    width: 100%;
+}
+.accordion__description{
+    font-size: 14px;
+}
+.accordion__description--red{
+  color: red;
+}
+
+.layout-max-width {
+    width: 100%;
+}
+.font-light {
+    color: @text-muted;
+}
+.app__accordion-arrow-button {
+    background: none;
+    border: none;
+    min-width: 40px;
+}
+.app__accordion-default-button {
+    font-size: @font-size-base;
+    width: 140px;
+    vertical-align: text-top;
+    padding: 5px 0px;
+    margin-right: 20px;
+    border:none
+}
+.app__accordion-blue-button {
+    background: @brand-primary;
+    color: white;
+}
+.app__accordion-gray-button {
+    background: #E6E6E6;
+    color: @text-muted;
+    border: 1px solid #B1B1B1;
+}
+.app__accordion-white-button {
+    background: white;
+    border: 1px solid #B1B1B1;
+}
+.app__accordion-blue-button:hover {
+    background: #5EA7EB;
+}
+
+.app__accordion-white-button:hover {
+    background: #E6E6E6;
+}
+
+.app-accordion__header:hover {
+  background: #E6E6E6 !important;
+}
+
+i.fa.fa-check {
+    color: #1B9C3A;
+}
