@@ -15,6 +15,11 @@ function routing ($stateProvider) {
       name: 'components.stepper',
       url: '/components/stepper',
       template: '<stepper-demo></stepper-demo>'
+    })
+    .state({
+      name: 'components.accordion',
+      url: '/components/accordion',
+      template: '<accordion-demo></accordion-demo>'
     });
 }
 

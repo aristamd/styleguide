@@ -1,0 +1,23 @@
+<div ng-cloak>
+  <md-content>
+    <md-toolbar class="md-hue-2 app-accordion__header" ng-class="{'no-border':$ctrl.isOpen}" ng-click="$ctrl.toggleAccordion()">
+      <div class="md-toolbar-tools">
+        <div layout="row" layout-align="space-between none">
+           <div layout="column" layout-align="center stretch" app-dynamic="$ctrl.headerContent" style="width:100%">
+           </div>
+           <div layout="column" layout-align="center center">
+            <div>
+              <button class="app__accordion-arrow-button pull-right">
+                <i ng-class="$ctrl.accordionClass"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </md-toolbar>
+    <div class="accordion__content animate-show-hide" ng-show="$ctrl.isOpen">
+      <div class="accordion__content--padding" app-dynamic="$ctrl.bodyContent">
+      </div>
+    </div>
+  </md-content>
+</div>

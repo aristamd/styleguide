@@ -1,0 +1,34 @@
+<div layout="row" layout-align="space-between none">
+<div layout="column" layout-align="center center" class="m-r-sm">
+    <span class="fa-stack">
+      <i class="fa fa-circle-o fa-stack-2x"></i>
+      <i class="fa fa-thermometer-quarter fa-stack-1x"></i>
+    </span>
+</div>
+<div layout="column"  class="layout-max-width">
+  <div flex>
+    <h4>Uric Acid</h4>
+  </div>
+  <div flex class="accordion__description">
+    <span class="accordion__description--red">Not Found</span>
+  </div>
+</div>
+<div layout="column" layout-align="center center">
+  <div>
+    <button class="app__accordion-default-button" ng-click="$ctrl.toggleMarked($event)"
+    ng-class="{'app__accordion-white-button': !$ctrl.isMarked, 'app__accordion-gray-button': $ctrl.isMarked}">
+      <i class="fa fa-check" ng-show="$ctrl.isMarked" aria-hidden="true"></i>
+      <span>{{ $ctrl.isMarked ? 'Marked as Available' : 'Mark as Available'}} </span>
+    </button>
+  </div>
+</div>
+<div layout="column" layout-align="center center">
+  <div>
+    <button class="app__accordion-default-button" ng-click="$ctrl.toggleOrdered($event)" ng-disabled="$ctrl.isOrdered"
+    ng-class="{'app__accordion-blue-button': !$ctrl.isOrdered, 'app__accordion-gray-button': $ctrl.isOrdered}">
+      <i class="fa fa-check" ng-if="$ctrl.isOrdered" aria-hidden="true"></i>
+      <span>{{ $ctrl.isOrdered ? 'Ordered' : 'Order'}} </span>
+    </button>
+  </div>
+</div>
+</div>
