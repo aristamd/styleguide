@@ -31,7 +31,7 @@ function AccordionController ($timeout, communicationCenterService) {
       });
 
       ctrl.toggleAccordion = function (forceState) {
-       if (ctrl.isDisabled === false) {
+       if (!ctrl.isDisabled) {
         if (!angular.isUndefined(forceState)) {
           ctrl.accordionClass = forceState ? 'fa fa-chevron-down' : 'fa fa-chevron-right';
           ctrl.isOpen = forceState;
