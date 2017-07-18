@@ -3,6 +3,7 @@ var accordion = {
   template: require('./accordion.html'),
   controller: AccordionController,
   bindings: {
+    isDisabled: '<',
     headerContent: '<',
     bodyContent: '<',
     id:'@',
@@ -30,6 +31,7 @@ function AccordionController ($timeout, communicationCenterService) {
       });
 
       ctrl.toggleAccordion = function (forceState) {
+       if (ctrl.isDisabled === false) {
         if (!angular.isUndefined(forceState)) {
           ctrl.accordionClass = forceState ? 'fa fa-chevron-down' : 'fa fa-chevron-right';
           ctrl.isOpen = forceState;
@@ -37,6 +39,7 @@ function AccordionController ($timeout, communicationCenterService) {
           ctrl.accordionClass = ctrl.isOpen === false ? 'fa fa-chevron-down' : 'fa fa-chevron-right';
           ctrl.isOpen = !ctrl.isOpen;
         }
+      }
       }
 
       ctrl.accordionChannel.on('onSetLoadingState')
@@ -48,7 +51,13 @@ function AccordionController ($timeout, communicationCenterService) {
           ctrl.accordionClass = latestClass;
         }
       });
+
+      ctrl.accordionChannel.on('onSetDisabled')
+      .subscribe(function (isDisabled) {
+        ctrl.isDisabled = isDisabled;
+      });
   }
+
 }
 
 export default accordion;

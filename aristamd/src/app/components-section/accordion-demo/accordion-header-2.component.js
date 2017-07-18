@@ -13,6 +13,7 @@ class AccordionHeader2Controller {
   toggleMarked(event) {
     event.stopPropagation();
     this.isMarked = !this.isMarked;
+    this.accordionChannel.post('onSetDisabled', false);
   }
 
   toggleOrdered(event) {
